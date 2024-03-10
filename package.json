@@ -1,0 +1,26 @@
+{
+  "name": "nuxt3-antd-template",
+  "version": "1.0.0",
+  "description": "一个基于 nuxt3 和 Ant-Design-Vue 的模板项目",
+  "main": "index.js",
+  "keywords": [
+    "nuxt3",
+    "antd"
+  ],
+  "author": "tangganxiao",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.10.3",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  }
+}

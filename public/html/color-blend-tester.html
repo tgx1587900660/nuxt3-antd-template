@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>颜色混合测试工具</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0050F4',
+              secondary: '#3B77F4',
+              neutral: {
+                100: '#F5F7FA',
+                200: '#E4E7ED',
+                300: '#C0C6CF',
+                400: '#909399',
+                500: '#606266',
+                600: '#303133',
+                700: '#1E1E1E',
+              },
+            },
+            fontFamily: {
+              inter: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            boxShadow: {
+              card: '0 4px 12px rgba(0, 0, 0, 0.08)',
+              'card-hover': '0 8px 24px rgba(0, 0, 0, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        .color-preview {
+          transition: all 0.3s ease;
+        }
+        .color-card {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          border-radius: 0.5rem;
+          transition: all 0.3s ease;
+        }
+        .color-card:hover {
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        .gradient-border {
+          position: relative;
+        }
+        .gradient-border::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          z-index: -10;
+          border-radius: 0.5rem;
+          border: 2px solid transparent;
+          background-image: linear-gradient(to right, #0050f4, #3b77f4);
+          mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+          mask-composite: exclude;
+          -webkit-mask-composite: xor;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-inter bg-neutral-100 text-neutral-700 min-h-screen">
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+      <div class="container mx-auto flex items-center justify-between px-4 py-4">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-palette text-primary text-2xl"></i>
+          <h1 class="text-neutral-700 text-xl font-bold">颜色混合测试工具</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button
+            id="add-test-case"
+            class="bg-primary hover:bg-primary/90 text-white flex items-center rounded-lg px-4 py-2 transition-all duration-300">
+            <i class="fa-solid fa-plus mr-2"></i>添加测试
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+      <div class="bg-white shadow-card mb-8 rounded-xl p-6">
+        <h2 class="mb-4 flex items-center text-lg font-semibold">
+          <i class="fa-solid fa-info-circle text-primary mr-2"></i>功能说明
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          这个工具用于测试颜色混合函数
+          <code class="bg-neutral-200 font-mono rounded px-1 py-0.5 text-sm">colorBlend(c1, c2, ratio)</code> 的效果。
+          你可以调整混合比例滑块查看不同混合效果，或点击"添加测试"按钮创建新的测试用例。
+        </p>
+        <div class="bg-neutral-100 font-mono text-neutral-700 overflow-x-auto rounded-lg p-4 text-sm">
+          <pre>
+/**  
+ * 颜色叠加
+ * @param {String} c1 颜色1-HEX格式
+ * @param {String} c2 颜色2-HEX格式
+ * @param {Number} ratio 小数-c1:所占比重；1-ratio:c2所占比重
+ * @returns {String} HEX格式
+ */
+const colorBlend = (c1, c2, ratio) => {
+  ratio = Math.max(Math.min(Number(ratio), 1), 0);
+  const r1 = parseInt(c1.substring(1, 3), 16);
+  const g1 = parseInt(c1.substring(3, 5), 16);
+  const b1 = parseInt(c1.substring(5, 7), 16);
+  const r2 = parseInt(c2.substring(1, 3), 16);
+  const g2 = parseInt(c2.substring(3, 5), 16);
+  const b2 = parseInt(c2.substring(5, 7), 16);
+  let r = Math.round(r1 * ratio + r2 * (1 - ratio));
+  let g = Math.round(g1 * ratio + g2 * (1 - ratio));
+  let b = Math.round(b1 * ratio + b2 * (1 - ratio));
+  r = "" + (r || 0).toString(16);
+  g = "" + (g || 0).toString(16);
+  b = "" + (b || 0).toString(16);
+  return `#${r}${g}${b}`;
+};</pre
+          >
+        </div>
+      </div>
+
+      <div id="test-cases" class="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-6">
+        <!-- 测试用例将通过JS动态生成 -->
+      </div>
+    </main>
+
+    <footer class="bg-white border-neutral-200 mt-12 border-t py-6">
+      <div class="text-neutral-500 container mx-auto px-4 text-center text-sm">
+        <p>© 2025 颜色混合测试工具 | 使用 Tailwind CSS 和 Font Awesome 构建</p>
+      </div>
+    </footer>
+
+    <script>
+      // 原始的颜色混合函数
+      const colorBlend = (c1, c2, ratio) => {
+        ratio = Math.max(Math.min(Number(ratio), 1), 0);
+        const r1 = parseInt(c1.substring(1, 3), 16);
+        const g1 = parseInt(c1.substring(3, 5), 16);
+        const b1 = parseInt(c1.substring(5, 7), 16);
+        const r2 = parseInt(c2.substring(1, 3), 16);
+        const g2 = parseInt(c2.substring(3, 5), 16);
+        const b2 = parseInt(c2.substring(5, 7), 16);
+        let r = Math.round(r1 * ratio + r2 * (1 - ratio));
+        let g = Math.round(g1 * ratio + g2 * (1 - ratio));
+        let b = Math.round(b1 * ratio + b2 * (1 - ratio));
+        r = '' + (r || 0).toString(16);
+        g = '' + (g || 0).toString(16);
+        b = '' + (b || 0).toString(16);
+        return `#${r}${g}${b}`;
+      };
+
+      // 修复后的颜色混合函数
+      const fixedColorBlend = (c1, c2, ratio) => {
+        ratio = Math.max(Math.min(Number(ratio), 1), 0);
+        const r1 = parseInt(c1.substring(1, 3), 16);
+        const g1 = parseInt(c1.substring(3, 5), 16);
+        const b1 = parseInt(c1.substring(5, 7), 16);
+        const r2 = parseInt(c2.substring(1, 3), 16);
+        const g2 = parseInt(c2.substring(3, 5), 16);
+        const b2 = parseInt(c2.substring(5, 7), 16);
+        let r = Math.round(r1 * ratio + r2 * (1 - ratio));
+        let g = Math.round(g1 * ratio + g2 * (1 - ratio));
+        let b = Math.round(b1 * ratio + b2 * (1 - ratio));
+
+        // 确保每个颜色通道都是两位十六进制
+        r = r.toString(16).padStart(2, '0');
+        g = g.toString(16).padStart(2, '0');
+        b = b.toString(16).padStart(2, '0');
+
+        return `#${r}${g}${b}`;
+      };
+
+      // 生成随机颜色
+      const getRandomColor = () => {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      };
+
+      // 创建测试用例HTML
+      const createTestCaseHTML = (id, c1, c2, ratio = 0.5) => {
+        const result = colorBlend(c1, c2, ratio);
+        const fixedResult = fixedColorBlend(c1, c2, ratio);
+
+        return `
+            <div class="test-case color-card p-6 bg-white" data-id="${id}">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-semibold text-neutral-700">测试用例 #${id}</h3>
+                    <div class="flex space-x-2">
+                        <button class="delete-test bg-neutral-200 hover:bg-neutral-300 text-neutral-700 p-1.5 rounded-lg transition-colors">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button class="randomize-colors bg-neutral-200 hover:bg-neutral-300 text-neutral-700 p-1.5 rounded-lg transition-colors">
+                            <i class="fa-solid fa-random"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="color-preview-container">
+                        <div class="color-preview h-24 rounded-lg mb-2" style="background-color: ${c1}"></div>
+                        <div class="text-center">
+                            <input type="color" value="${c1}" class="color-input w-10 h-10 cursor-pointer" data-type="c1">
+                            <div class="text-sm font-mono mt-1">${c1}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center">
+                        <div class="relative">
+                            <i class="fa-solid fa-arrows-h text-neutral-400 text-xl"></i>
+                            <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                                <span class="text-xs bg-neutral-200 px-2 py-1 rounded-full">混合比例</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="color-preview-container">
+                        <div class="color-preview h-24 rounded-lg mb-2" style="background-color: ${c2}"></div>
+                        <div class="text-center">
+                            <input type="color" value="${c2}" class="color-input w-10 h-10 cursor-pointer" data-type="c2">
+                            <div class="text-sm font-mono mt-1">${c2}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <input type="range" min="0" max="1" step="0.01" value="${ratio}" 
+                        class="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer ratio-slider">
+                    <div class="flex justify-between text-xs text-neutral-500 mt-1">
+                        <span>0% (${c2})</span>
+                        <span>混合比例: <span class="ratio-value font-medium">${Math.round(ratio * 100)}%</span></span>
+                        <span>100% (${c1})</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <div class="text-sm text-neutral-500 mb-1">原始函数结果</div>
+                        <div class="relative">
+                            <div class="color-preview h-16 rounded-lg mb-2" style="background-color: ${result}"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20 rounded-lg cursor-pointer copy-result" data-result="${result}">
+                                <span class="bg-white text-neutral-700 px-3 py-1 rounded-lg text-sm">复制</span>
+                            </div>
+                            <div class="text-center text-sm font-mono">${result}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gradient-border">
+                        <div class="text-sm text-neutral-500 mb-1">修复后函数结果</div>
+                        <div class="relative">
+                            <div class="color-preview h-16 rounded-lg mb-2" style="background-color: ${fixedResult}"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20 rounded-lg cursor-pointer copy-result" data-result="${fixedResult}">
+                                <span class="bg-white text-neutral-700 px-3 py-1 rounded-lg text-sm">复制</span>
+                            </div>
+                            <div class="text-center text-sm font-mono">${fixedResult}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-xs text-neutral-400 text-center">
+                    <i class="fa-solid fa-exclamation-circle mr-1"></i>原始函数在某些情况下可能生成错误的颜色值
+                </div>
+            </div>
+            `;
+      };
+
+      // 初始化测试用例
+      const testCases = [
+        { c1: '#FF0000', c2: '#0000FF', ratio: 0.5 },
+        { c1: '#00FF00', c2: '#000000', ratio: 0.3 },
+        { c1: '#FFFFFF', c2: '#FF00FF', ratio: 0.7 },
+      ];
+
+      // 渲染所有测试用例
+      const renderTestCases = () => {
+        const testCasesContainer = document.getElementById('test-cases');
+        testCasesContainer.innerHTML = '';
+
+        testCases.forEach((testCase, index) => {
+          testCasesContainer.innerHTML += createTestCaseHTML(index + 1, testCase.c1, testCase.c2, testCase.ratio);
+        });
+
+        // 添加事件监听器
+        attachEventListeners();
+      };
+
+      // 添加事件监听器
+      const attachEventListeners = () => {
+        // 监听滑块变化
+        document.querySelectorAll('.ratio-slider').forEach((slider) => {
+          slider.addEventListener('input', function () {
+            const testCase = this.closest('.test-case');
+            const id = parseInt(testCase.dataset.id) - 1;
+            const ratio = parseFloat(this.value);
+
+            testCases[id].ratio = ratio;
+            this.nextElementSibling.querySelector('.ratio-value').textContent = `${Math.round(ratio * 100)}%`;
+
+            updateResults(testCase, testCases[id].c1, testCases[id].c2, ratio);
+          });
+        });
+
+        // 监听颜色输入变化
+        document.querySelectorAll('.color-input').forEach((input) => {
+          input.addEventListener('input', function () {
+            const testCase = this.closest('.test-case');
+            const id = parseInt(testCase.dataset.id) - 1;
+            const type = this.dataset.type;
+            const color = this.value.toUpperCase();
+
+            testCases[id][type] = color;
+            this.nextElementSibling.textContent = color;
+            this.closest('.color-preview-container').querySelector('.color-preview').style.backgroundColor = color;
+
+            updateResults(testCase, testCases[id].c1, testCases[id].c2, testCases[id].ratio);
+          });
+        });
+
+        // 监听删除按钮
+        document.querySelectorAll('.delete-test').forEach((button) => {
+          button.addEventListener('click', function () {
+            const testCase = this.closest('.test-case');
+            const id = parseInt(testCase.dataset.id) - 1;
+
+            testCases.splice(id, 1);
+            renderTestCases();
+          });
+        });
+
+        // 监听随机颜色按钮
+        document.querySelectorAll('.randomize-colors').forEach((button) => {
+          button.addEventListener('click', function () {
+            const testCase = this.closest('.test-case');
+            const id = parseInt(testCase.dataset.id) - 1;
+
+            testCases[id].c1 = getRandomColor();
+            testCases[id].c2 = getRandomColor();
+
+            renderTestCases();
+          });
+        });
+
+        // 监听复制结果按钮
+        document.querySelectorAll('.copy-result').forEach((button) => {
+          button.addEventListener('click', function () {
+            const result = this.dataset.result;
+            navigator.clipboard.writeText(result).then(() => {
+              const originalText = this.querySelector('span').textContent;
+              this.querySelector('span').textContent = '已复制!';
+
+              setTimeout(() => {
+                this.querySelector('span').textContent = originalText;
+              }, 1500);
+            });
+          });
+        });
+      };
+
+      // 更新结果区域
+      const updateResults = (testCase, c1, c2, ratio) => {
+        const result = colorBlend(c1, c2, ratio);
+        const fixedResult = fixedColorBlend(c1, c2, ratio);
+
+        const resultElements = testCase.querySelectorAll('.color-preview');
+        resultElements[2].style.backgroundColor = result;
+        resultElements[3].style.backgroundColor = fixedResult;
+
+        const resultTextElements = testCase.querySelectorAll('.font-mono');
+        resultTextElements[2].textContent = result;
+        resultTextElements[3].textContent = fixedResult;
+
+        // 更新复制按钮的data-result属性
+        const copyButtons = testCase.querySelectorAll('.copy-result');
+        copyButtons[0].dataset.result = result;
+        copyButtons[1].dataset.result = fixedResult;
+      };
+
+      // 添加新测试用例
+      document.getElementById('add-test-case').addEventListener('click', () => {
+        testCases.push({
+          c1: getRandomColor(),
+          c2: getRandomColor(),
+          ratio: 0.5,
+        });
+
+        renderTestCases();
+      });
+
+      // 初始化页面
+      renderTestCases();
+    </script>
+  </body>
+</html>

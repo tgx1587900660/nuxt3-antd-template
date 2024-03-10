@@ -1,0 +1,19 @@
+# Mac OS
+.DS_Store
+
+.vscode
+
+.nuxt
+.output
+node_modules
+# public
+# !public/html/
+
+build
+dist
+mock
+
+pnpm-lock.yaml
+package-lock.json
+yarn-error.log
+yarn.lock

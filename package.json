@@ -13,6 +13,7 @@
   "type": "module",
   "scripts": {
     "dev": "nuxt dev",
+    "dev-https": "nuxt dev --https -p 4000",
     "build": "nuxt build",
     "preview": "nuxt preview",
     "generate": "nuxt generate",

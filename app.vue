@@ -1,10 +1,7 @@
 <template>
-  <div>
+  <div :class="'h-full w-full'">
     <NuxtPage />
   </div>
 </template>
 
-<script setup lang="ts">
-const a = import.meta.env.VITE_APP_NAME
-console.log('a :>> ', a)
-</script>
+<script setup lang="ts"></script>

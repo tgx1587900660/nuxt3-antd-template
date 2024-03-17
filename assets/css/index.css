@@ -1,0 +1,8 @@
+@import './reset.css';
+@import 'ant-design-vue/dist/antd.css';
+@import './tailwind.css';
+
+#__nuxt {
+  height: 100%;
+  width: 100%;
+}

@@ -1,28 +1,69 @@
 <template>
-  <div class="h-full w-full">
+  <div class="transition duration-1000 h-full w-full">
     <AppHeader />
-    <div class="w-[960px] m-auto">
-      <div class="flex gap-5">
-        <div :class="'flex-1 shadow-lg shadow-blue-500/50 group overflow-hidden'">
-          <img class="w-full object-cover transition-[transform] duration-300 group-hover:scale-105" :src="`https://picsum.photos/id/913/600/500?id=${Math.random()}`" alt="" />
-        </div>
-        <div :class="'flex-1 shadow-lg shadow-blue-500/50 group overflow-hidden'">
-          <img class="w-full object-cover transition-[transform] duration-300 group-hover:scale-105" :src="`https://picsum.photos/id/421/600/500?id=${Math.random()}`" alt="" />
-        </div>
-      </div>
-
-      <div class="flex gap-5 mt-5">
-        <div :class="'flex-1 shadow-lg shadow-blue-500/50 group overflow-hidden'">
-          <img class="w-full object-cover transition-[transform] duration-300 group-hover:scale-105" :src="`https://picsum.photos/id/894/600/500?id=${Math.random()}`" alt="" />
-        </div>
-        <div :class="'flex-1 shadow-lg shadow-blue-500/50 group overflow-hidden'">
-          <img class="w-full object-cover transition-[transform] duration-300 group-hover:scale-105" :src="`https://picsum.photos/id/957/600/500?id=${Math.random()}`" alt="" />
-        </div>
+    <div class="color-change-box w-full m-auto flex flex-wrap gap-5 px-[200px]">
+      <div v-for="(img, i) in imgs" :key="i" :class="'basis-[calc(50%-10px)] '">
+        <img
+          class="w-full object-cover transition-transform duration-800 hover:scale-105"
+          crossorigin="anonymous"
+          :style="{
+            opacity: curIndex === -1 || curIndex === i ? 1 : 0.4
+          }"
+          :src="img"
+          @mouseenter="handleMouseEnter($event.target, i)"
+          @mouseleave="handleMouseLeave" />
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup>
+import ColorThief from 'colorthief'
+import { onMounted, ref } from 'vue'
 
-<style lang="less" scoped></style>
+const imgs = []
+for (let i = 0; i < 4; i++) {
+  imgs.push(`https://picsum.photos/600/500?r=${i}`)
+}
+
+const curIndex = ref(-1)
+const html = ref()
+
+async function handleMouseEnter(img, index) {
+  console.log('handleMouseEnter')
+  curIndex.value = index
+
+  const colorThief = new ColorThief()
+  // console.log('colorThief :>> ', colorThief)
+  const colors = await colorThief.getPalette(img, 3) // img: 是img元素， 3:是跳过的像素来采样， https://lokeshdhakar.com/projects/color-thief/#api
+  // console.log('colors :>> ', colors)
+  const newColors = colors.map(c => `rgb(${c[0]}, ${c[1]}, ${c[2]})`)
+  // console.log('newColors :>> ', newColors)
+
+  // 设置3个主色值
+  html.value.style.setProperty('--c1', newColors[0])
+  html.value.style.setProperty('--c2', newColors[1])
+  html.value.style.setProperty('--c3', newColors[2])
+}
+
+function handleMouseLeave() {
+  console.log('handleMouseLeave')
+  curIndex.value = -1
+
+  html.value.style.setProperty('--c1', '#fff')
+  html.value.style.setProperty('--c2', '#fff')
+  html.value.style.setProperty('--c3', '#fff')
+}
+
+onMounted(() => {
+  html.value = document.documentElement
+})
+</script>
+
+<style lang="less" scoped>
+.color-change-box {
+  background: linear-gradient(to bottom, var(--c1), var(--c2), var(--c3));
+  transition: all 0.8s;
+  // TODO 怎么给 color-change-box 的渐变背景设置一个过渡，而不是突然变色？
+}
+</style>

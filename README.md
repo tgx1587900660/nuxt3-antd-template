@@ -25,4 +25,4 @@ pnpm preview
 
 ## 1. css-1 —— 使用 colorthief 提取图片色彩，并设置成渐变背景到任意元素
 
-![css-1](./assets/img/css-1.gif){: width="600px" }
+![css-1](./assets/img/css-1.gif)

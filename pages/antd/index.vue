@@ -63,7 +63,7 @@
 
     <a-dropdown>
       <a class="ant-dropdown-link" @click.prevent> Hover me [[ 有 Hydration 警告问题 ]] </a>
-      <template #overlay :getPopupContainer="triggerNode => triggerNode.parentNode">
+      <template #overlay :getPopupContainer="(node: any) => node.parentNode">
         <a-menu>
           <a-menu-item>
             <a href="javascript:;">1st menu item</a>

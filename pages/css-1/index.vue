@@ -1,17 +1,19 @@
 <template>
   <div class="transition duration-1000 h-full w-full">
     <AppHeader />
-    <div class="color-change-box w-full m-auto flex flex-wrap gap-5 px-[200px]">
-      <div v-for="(img, i) in imgs" :key="i" :class="'basis-[calc(50%-10px)] '">
-        <img
-          class="w-full object-cover transition-transform duration-800 hover:scale-105"
-          crossorigin="anonymous"
-          :style="{
-            opacity: curIndex === -1 || curIndex === i ? 1 : 0.4
-          }"
-          :src="img"
-          @mouseenter="handleMouseEnter($event.target, i)"
-          @mouseleave="handleMouseLeave" />
+    <div class="color-change-box w-full py-5">
+      <div class="w-[900px] m-auto flex flex-wrap gap-5">
+        <div v-for="(img, i) in imgs" :key="i" :class="'basis-[calc(50%-10px)] '">
+          <img
+            class="w-full object-cover transition-transform duration-800 hover:scale-105"
+            crossorigin="anonymous"
+            :style="{
+              opacity: curIndex === -1 || curIndex === i ? 1 : 0.3
+            }"
+            :src="img"
+            @mouseenter="handleMouseEnter($event.target, i)"
+            @mouseleave="handleMouseLeave" />
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +32,7 @@ const curIndex = ref(-1)
 const html = ref()
 
 async function handleMouseEnter(img, index) {
-  console.log('handleMouseEnter')
+  // console.log('handleMouseEnter')
   curIndex.value = index
 
   const colorThief = new ColorThief()
@@ -47,7 +49,7 @@ async function handleMouseEnter(img, index) {
 }
 
 function handleMouseLeave() {
-  console.log('handleMouseLeave')
+  // console.log('handleMouseLeave')
   curIndex.value = -1
 
   html.value.style.setProperty('--c1', '#fff')
@@ -63,7 +65,7 @@ onMounted(() => {
 <style lang="less" scoped>
 .color-change-box {
   background: linear-gradient(to bottom, var(--c1), var(--c2), var(--c3));
-  transition: all 0.8s;
+  // transition: all 0.8s;
   // TODO 怎么给 color-change-box 的渐变背景设置一个过渡，而不是突然变色？
 }
 </style>

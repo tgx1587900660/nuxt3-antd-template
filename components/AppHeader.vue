@@ -4,6 +4,7 @@
     <div :class="'flex gap-5 pb-4'">
       <NuxtLink :to="'/'">页眉页脚</NuxtLink>
       <NuxtLink :to="'/antd'">ant-design-vue</NuxtLink>
+      <NuxtLink :to="'/css-1'">css-1</NuxtLink>
     </div>
   </div>
 </template>

@@ -7,7 +7,7 @@
 
     <hr />
     ------------ 测试 tailwindcss ------------
-    <div class="font-bold underline text-[deeppink]">Hello world!</div>
+    <div class="font-bold underline text-[deeppink] bg-[pink]">Hello world!</div>
     <div class="text-[#ff0000]">Hello world!</div>
     <div class="text-[skyblue]">Hello world!</div>
 

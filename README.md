@@ -1,13 +1,10 @@
 # 安装使用
 
 ```bash
-# 安装依赖
-pnpm i
-# 运行
-pnpm dev # 或者 pnpm dev-https
-# 预览
-pnpm build
-pnpm preview
+pnpm i # 安装依赖
+pnpm dev # 运行开发
+pnpm build # 打包
+pnpm preview # 预览 build 后的文件
 ```
 
 # 功能日志
@@ -25,4 +22,4 @@ pnpm preview
 
 ## 1. css-1 —— 使用 colorthief 提取图片色彩，并设置成渐变背景到任意元素
 
-![css-1](./assets/img/css-1.gif)
+![css-1](./assets/img/demo1/css-1.gif)

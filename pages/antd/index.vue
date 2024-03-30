@@ -10,7 +10,11 @@
     <hr />
     <div>
       <a-switch v-model:checked="ellipsis" />
-      <a-typography-text :style="ellipsis ? { width: '100px' } : {}" :ellipsis="ellipsis ? { tooltip: 'I am ellipsis now!' } : false" content="Ant Design, a design language for background applications, is refined by Ant UED Team." />
+      <a-typography-text
+        :style="ellipsis ? { width: '100px' } : {}"
+        :ellipsis="ellipsis ? { tooltip: 'I am ellipsis now!' } : false"
+        content="Ant Design, a design language for background applications, is refined by Ant UED Team.">
+      </a-typography-text>
     </div>
 
     <a-divider>With Text</a-divider>
@@ -80,7 +84,11 @@
 
     <hr />
 
-    <a-page-header style="border: 1px solid rgb(235, 237, 240)" title="Title" sub-title="This is a subtitle" @back="() => null" />
+    <a-page-header
+      style="border: 1px solid rgb(235, 237, 240)"
+      title="Title"
+      sub-title="This is a subtitle"
+      @back="() => null" />
 
     <hr />
 
@@ -120,23 +128,23 @@
 </template>
 
 <script setup lang="ts">
-import { message } from 'ant-design-vue'
+import { message } from 'ant-design-vue';
 const handleMessage = () => {
-  message.info('This is a normal message')
-}
+  message.info('This is a normal message');
+};
 const handleMessage2 = () => {
-  message.success('This is a success message')
-}
+  message.success('This is a success message');
+};
 
 const handleMessage3 = () => {
-  message.error('This is an error message')
-}
+  message.error('This is an error message');
+};
 
-const ellipsis = ref(true)
+const ellipsis = ref(true);
 
-const top = ref(100)
+const top = ref(100);
 
-const current = ref(3)
+const current = ref(3);
 </script>
 
 <style lang="less" scoped>

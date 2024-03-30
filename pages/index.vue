@@ -7,7 +7,7 @@
 
     <hr />
     ------------ 测试 tailwindcss ------------
-    <div class="font-bold underline text-[deeppink] bg-[pink]">Hello world!</div>
+    <div class="bg-[pink] font-bold text-[deeppink] underline">Hello world!</div>
     <div class="text-[#ff0000]">Hello world!</div>
     <div class="text-[skyblue]">Hello world!</div>
 
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-const appName = import.meta.env.VITE_APP_NAME
+const appName = import.meta.env.VITE_APP_NAME;
 </script>
 
 <style lang="less" scoped></style>

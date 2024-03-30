@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {}, // 将Tailwind添加到PostCSS配置中
-      autoprefixer: {}
-    }
-  }
-})
+      autoprefixer: {},
+    },
+  },
+});

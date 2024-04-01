@@ -17,7 +17,7 @@ pnpm preview # 预览 build 后的文件
 6. 添加 colorthief 依赖，并完成一个 demo - 2024.03.24 (TODO: 怎么在设置渐变背景的时候给个过渡？)
 7. 添加 prettier + prettier-plugin-tailwindcss 依赖，实现 tailwindcss 类名自动排序 - 2024.03.30
 8. 添加 husky + lint-staged 依赖，实现 git 钩子注册 - 2024.03.30
-9. 添加 @pinia/nuxt 模块，实现 点击事件动态切换 nuxt 的 layout - 2024.04.01
+9. 添加 @pinia/nuxt 模块，利用 pinia store + 点击事件 实现 layout 动态切换 - 2024.04.01
 
 # demo 索引
 

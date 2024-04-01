@@ -1,6 +1,5 @@
 <template>
   <div :class="'h-full w-full'">
-    <AppHeader />
     ------------ 测试 首页+自动导入组件 ------------
     <div>Welcome to the homepage</div>
     <AppAlert> This is an auto-imported component </AppAlert>
@@ -16,8 +15,6 @@
     <div>
       <div>import.meta.env.VITE_APP_NAME _________===> {{ appName }}</div>
     </div>
-
-    <AppFooter />
   </div>
 </template>
 

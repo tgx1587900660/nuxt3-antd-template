@@ -1,6 +1,5 @@
 <template>
   <div :class="'h-[3000px] w-full'">
-    <AppHeader />
     <div>
       <a-button @click="handleMessage"> button </a-button>
       <a-button @click="handleMessage2"> button2 </a-button>

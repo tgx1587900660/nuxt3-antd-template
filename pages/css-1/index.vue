@@ -1,6 +1,5 @@
 <template>
   <div class="h-full w-full transition duration-1000">
-    <AppHeader />
     <div class="color-change-box w-full py-5">
       <div class="m-auto flex w-[900px] flex-wrap gap-5">
         <div v-for="(img, i) in imgs" :key="i" :class="'basis-[calc(50%-10px)] '">

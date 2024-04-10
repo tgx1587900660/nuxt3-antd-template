@@ -27,6 +27,15 @@ export default {
     fontFamily: {
       Oswald: 'Oswald, ui-serif', // Adds a new `font-Oswald` class
     },
+    borderWidth: {
+      DEFAULT: '1px',
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+    },
   },
   corePlugins: {
     preflight: false, // 禁用预设样式 (如果要把 TailwindCSS 添加到现有项目中，可以禁用预设样式)

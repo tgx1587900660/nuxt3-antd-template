@@ -25,3 +25,7 @@ pnpm preview # 预览 build 后的文件
 ## 1. css-1 —— 使用 colorthief 提取图片色彩，并设置成渐变背景到任意元素
 
 ![css-1](./assets/img/demo1/css-1.gif)
+
+## 2. css-2 —— 使用 :checked 伪类 + label + 相邻兄弟选择器(~) 实现自定义单选框样式
+
+![css-2](./assets/img/demo2/css-2.gif)

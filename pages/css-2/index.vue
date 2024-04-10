@@ -5,7 +5,7 @@
       <p>input是可替换元素，默认不可以修改样式</p>
       <p>使用 伪元素:checked 和 相邻兄弟选择器 实现自定义单选框</p>
     </div>
-    <div class="flex w-[200px] gap-10 bg-[pink] p-5">
+    <div class="flex w-[200px] gap-10 border-solid border-[pink] p-5">
       <label :class="'flex cursor-pointer items-center justify-center'">
         <input class="input-native" type="radio" name="gender" id="" />
         <span class="yuan"></span>

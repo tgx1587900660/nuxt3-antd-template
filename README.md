@@ -18,6 +18,7 @@ pnpm preview # 预览 build 后的文件
 7. 添加 prettier + prettier-plugin-tailwindcss 依赖，实现 tailwindcss 类名自动排序 - 2024.03.30
 8. 添加 husky + lint-staged 依赖，实现 git 钩子注册 - 2024.03.30
 9. 添加 @pinia/nuxt 模块，利用 pinia store + 点击事件 实现 layout 动态切换 - 2024.04.01
+10. 使用纯css实现自定义单选框样式 - 2024.04.11
 
 # demo 索引
 

@@ -19,6 +19,7 @@ pnpm preview # 预览 build 后的文件
 8. 添加 husky + lint-staged 依赖，实现 git 钩子注册 - 2024.03.30
 9. 添加 @pinia/nuxt 模块，利用 pinia store + 点击事件 实现 layout 动态切换 - 2024.04.01
 10. 使用纯css实现自定义单选框样式 - 2024.04.11
+11. 依赖图片的尺寸大小不同，实现flex异形布局 - 2024.04.11
 
 # demo 索引
 
@@ -29,3 +30,7 @@ pnpm preview # 预览 build 后的文件
 ## 2. css-2 —— 使用 :checked 伪类 + label + 相邻兄弟选择器(~) 实现自定义单选框样式
 
 ![css-2](./assets/img/demo2/css-2.gif)
+
+## 3. css-3 —— 简单的 flex 异形布局，需要图片尺寸大小不同
+
+![css-3](./assets/img/demo3/css-3.gif)

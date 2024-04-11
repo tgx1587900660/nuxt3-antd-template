@@ -1,10 +1,15 @@
 <template>
   <div>
     <NuxtLayout :name="layoutStore.layout">
-      ------------ 测试 pinia + layout布局 ------------
-      <div>{{ `layoutStore.layout: ${layoutStore.layout}` }} <br />{{ `layoutStore.count: ${layoutStore.count}` }}</div>
-      <button @click="onClick">change layout and increment count</button>
-      <hr />
+      <div class="opacity-40">
+        <span> 测试 pinia + layout布局</span>
+        <span> ----- </span>
+        <span>{{ `layoutStore.layout: ${layoutStore.layout}` }}</span>
+        <span> ----- </span>
+        <span>{{ `layoutStore.count: ${layoutStore.count}` }} </span>&nbsp;
+        <button @click="onClick">change layout and increment count</button>
+        <hr />
+      </div>
 
       <NuxtPage />
     </NuxtLayout>

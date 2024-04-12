@@ -10,4 +10,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  vite: {
+    build: {
+      sourcemap: true,
+    },
+  },
 });

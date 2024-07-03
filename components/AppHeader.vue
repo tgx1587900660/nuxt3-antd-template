@@ -11,6 +11,7 @@
       <NuxtLink :to="'/demo-2'" title="使用纯css实现自定义单选框">demo-2</NuxtLink>
       <NuxtLink :to="'/demo-3'" title="依赖图片的尺寸大小不同，实现异形布局">demo-3</NuxtLink>
       <NuxtLink :to="'/demo-4'" title="Clipboard API - 实现自定义复制粘贴">demo-4</NuxtLink>
+      <NuxtLink :to="'/demo-5'" title="等比缩放的容器盒子">demo-5</NuxtLink>
     </div>
   </div>
 </template>

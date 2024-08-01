@@ -1,18 +1,34 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config';
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt'],
-  // 全局添加CSS文件
-  css: ['~/assets/css/index.css'],
+  modules: [
+    '@pinia/nuxt',
+    '@ant-design-vue/nuxt',
+    // ...
+  ],
+  antd: {
+    extractStyle: true,
+  },
+  css: [
+    '~/assets/css/index.css',
+    // 'ant-design-vue/dist/reset.css',
+    // ...
+  ],
   postcss: {
     plugins: {
-      tailwindcss: {}, // 将Tailwind添加到PostCSS配置中
+      tailwindcss: {},
       autoprefixer: {},
     },
   },
   vite: {
-    build: {
-      sourcemap: true,
+    resolve: {
+      alias: {
+        'ant-design-vue/dist': 'ant-design-vue/dist',
+        'ant-design-vue/es': 'ant-design-vue/es',
+        'ant-design-vue/lib': 'ant-design-vue/es',
+        'ant-design-vue': 'ant-design-vue/es',
+      },
     },
   },
 });

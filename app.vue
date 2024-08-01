@@ -1,18 +1,19 @@
 <template>
   <div>
-    <NuxtLayout :name="layoutStore.layout">
-      <div class="opacity-40">
-        <span> 测试 pinia + layout布局</span>
-        <span> ----- </span>
-        <span>{{ `layoutStore.layout: ${layoutStore.layout}` }}</span>
-        <span> ----- </span>
-        <span>{{ `layoutStore.count: ${layoutStore.count}` }} </span>&nbsp;
-        <button @click="onClick">change layout and increment count</button>
-        <hr />
-      </div>
-
-      <NuxtPage />
-    </NuxtLayout>
+    <a-extract-style>
+      <NuxtLayout>
+        <div class="opacity-40">
+          <span> 测试 pinia + layout布局</span>
+          <span> ----- </span>
+          <span>{{ `layoutStore.layout: ${layoutStore.layout}` }}</span>
+          <span> ----- </span>
+          <span>{{ `layoutStore.count: ${layoutStore.count}` }} </span>&nbsp;
+          <button @click="onClick">change layout and increment count</button>
+          <hr />
+        </div>
+        <NuxtPage />
+      </NuxtLayout>
+    </a-extract-style>
   </div>
 </template>
 

@@ -3,16 +3,12 @@
   "version": "1.0.0",
   "description": "一个基于 nuxt3 和 Ant-Design-Vue 的模板项目",
   "main": "index.js",
-  "keywords": [
-    "nuxt3",
-    "antd"
-  ],
   "author": "tangganxiao",
   "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host -p 2999",
     "dev-https": "nuxt dev --https -p 4000",
     "build": "nuxt build",
     "preview": "nuxt preview",
@@ -21,8 +17,9 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@ant-design-vue/nuxt": "^1.4.2",
     "@pinia/nuxt": "^0.5.1",
-    "ant-design-vue": "^3.2.20",
+    "ant-design-vue": "~4.2.3",
     "colorthief": "^2.4.0",
     "nuxt": "^3.10.3",
     "vue": "^3.4.21",

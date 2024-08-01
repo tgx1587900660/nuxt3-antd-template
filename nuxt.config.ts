@@ -2,25 +2,30 @@ import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     '@pinia/nuxt',
     '@ant-design-vue/nuxt',
     // ...
   ],
+
   antd: {
     extractStyle: true,
   },
+
   css: [
     '~/assets/css/index.css',
     // 'ant-design-vue/dist/reset.css',
     // ...
   ],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   vite: {
     resolve: {
       alias: {
@@ -31,4 +36,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: '2024-08-02',
 });

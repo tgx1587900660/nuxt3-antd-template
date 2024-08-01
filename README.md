@@ -22,6 +22,7 @@ pnpm preview # 预览 build 后的文件
 11. 依赖图片的尺寸大小不同，实现flex异形布局 - 2024.04.11
 12. onErrorCaptured 全局钩子函数捕获错误 + 惰性函数 - 2024.04.12
 13. contenteditable(可编辑元素) + Clipboard API 实现自定义复制粘贴文本/图片 - 2024.04.13
+14. 升级nuxt版本，解决 tailwindcss 在 css 中的 Unknown at rule 警告问题 - 2024.08.01
 
 # demo 索引
 

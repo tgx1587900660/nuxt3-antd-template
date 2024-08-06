@@ -5,8 +5,8 @@
       <strong id="text-box" class="text-[deeppink]"> 这是一段文本 xxxskljfsdjflsjdfl </strong>
     </p>
     <p>
-      <button @click="onCopy">复制文本</button>
-      <button @click="onPaste">粘贴文本</button>
+      <a-button @click="onCopy">复制文本</a-button>
+      <a-button @click="onPaste">粘贴文本</a-button>
     </p>
     <a-textarea id="paste-box" :rows="10" placeholder="请粘贴文本"></a-textarea>
     <p></p>
@@ -77,11 +77,17 @@ function handlePaste(e: ClipboardEvent) {
   }
 }
 
+function stopCopy(e: Event) {
+  e.preventDefault();
+  copyText('不准复制！！！！！！！');
+}
+
 onMounted(() => {
-  document.addEventListener('copy', (e) => {
-    e.preventDefault();
-    copyText('不准复制！！！！！！！');
-  });
+  document.addEventListener('copy', stopCopy);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('copy', stopCopy);
 });
 </script>
 

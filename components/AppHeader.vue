@@ -1,5 +1,5 @@
 <template>
-  <div :class="'mb-5 border-0 border-b-[4px] border-solid border-[#ccc] px-20'">
+  <div :class="'border-b-1 border-solid border-[#ccc] px-20'">
     <h1 :class="'flex justify-center text-[24px]'">
       <span>AppHeader 组件内容</span>
       <slot></slot>

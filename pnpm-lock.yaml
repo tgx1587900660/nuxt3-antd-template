@@ -11,6 +11,9 @@ importers:
       '@ant-design-vue/nuxt':
         specifier: ^1.4.2
         version: 1.4.2(ant-design-vue@4.2.3(vue@3.4.35))(magicast@0.3.4)(rollup@4.19.2)(vue@3.4.35)
+      '@ant-design/icons-vue':
+        specifier: ^7.0.1
+        version: 7.0.1(vue@3.4.35)
       '@pinia/nuxt':
         specifier: ^0.5.2
         version: 0.5.2(magicast@0.3.4)(rollup@4.19.2)(vue@3.4.35)

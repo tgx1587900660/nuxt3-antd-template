@@ -1,35 +1,66 @@
 <template>
-  <div>
-    <a-extract-style>
-      <NuxtLayout>
-        <div class="opacity-40">
-          <span> 测试 pinia + layout布局</span>
-          <span> ----- </span>
-          <span>{{ `layoutStore.layout: ${layoutStore.layout}` }}</span>
-          <span> ----- </span>
-          <span>{{ `layoutStore.count: ${layoutStore.count}` }} </span>&nbsp;
-          <button @click="onClick">change layout and increment count</button>
-          <hr />
+  <a-extract-style>
+    <NuxtLayout>
+      <div class="flex">
+        <div class="menu">
+          <TgxMenu :items="items"></TgxMenu>
         </div>
-        <NuxtPage />
-      </NuxtLayout>
-    </a-extract-style>
-  </div>
+
+        <div class="w-[calc(100%-200px)] flex-1">
+          <NuxtPage />
+        </div>
+      </div>
+    </NuxtLayout>
+  </a-extract-style>
 </template>
 
 <script setup lang="ts">
-import { Layouts, useLayout } from '~/store';
-const layoutStore = useLayout(); // 不要解构，否则会导致无法响应式
+const items = [
+  { key: '/', label: '测试自动导入组件 + tailwind + 环境变量', to: '/' },
+  { key: '/antd', label: '测试引入的ant-design-vue组件库', to: '/antd' },
+  { key: '/demo-1', label: '提取照片的主要色值，并应用到任意元素渐变背景', to: '/demo-1' },
+  { key: '/demo-2', label: '使用纯css实现自定义单选框', to: '/demo-2' },
+  { key: '/demo-3', label: '依赖图片的尺寸大小不同，实现异形布局', to: '/demo-3' },
+  { key: '/demo-4', label: 'Clipboard API - 实现自定义复制粘贴', to: '/demo-4' },
+  { key: '/demo-5', label: '等比缩放的容器盒子', to: '/demo-5' },
 
-// 点击事件动态切换布局
-function onClick() {
-  if (layoutStore.layout === Layouts.Custom) {
-    layoutStore.set(Layouts.Default);
-  } else {
-    layoutStore.set(Layouts.Custom);
-  }
-  layoutStore.increment();
-}
+  // { key: 'app', label: 'Navigation Two', title: 'Navigation Two' },
+  // { key: 'test2', label: '测试页2', title: '测试页2' },
+  // { key: 'app2', label: 'Navigation Two2', title: 'Navigation Two2' },
+  // { key: 'test3', label: '测试页3', title: '测试页3' },
+  // { key: 'app3', label: 'Navigation Two3', title: 'Navigation Two3' },
+  // { key: 'test4', label: '测试页4', title: '测试页4' },
+  // { key: 'app4', label: 'Navigation Two4', title: 'Navigation Two4' },
+  // { key: 'test5', label: '测试页5', title: '测试页5' },
+  // { key: 'app5', label: 'Navigation Two5', title: 'Navigation Two5' },
+  // { key: 'test6', label: '测试页6', title: '测试页6' },
+  // { key: 'app6', label: 'Navigation Two6', title: 'Navigation Two6' },
+  // { key: 'test7', label: '测试页7', title: '测试页7' },
+  // { key: 'app7', label: 'Navigation Two7', title: 'Navigation Two7' },
+  // { key: 'test8', label: '测试页8', title: '测试页8' },
+  // { key: 'app8', label: 'Navigation Two8', title: 'Navigation Two8' },
+  // { key: 'test9', label: '测试页9', title: '测试页9' },
+  // { key: 'app9', label: 'Navigation Two9', title: 'Navigation Two9' },
+  // { key: 'test10', label: '测试页10', title: '测试页10' },
+  // { key: 'app10', label: 'Navigation Two10', title: 'Navigation Two10' },
+  // { key: 'test11', label: '测试页11', title: '测试页11' },
+  // { key: 'app11', label: 'Navigation Two11', title: 'Navigation Two11' },
+  // { key: 'test12', label: '测试页12', title: '测试页12' },
+  // { key: 'app12', label: 'Navigation Two12', title: 'Navigation Two12' },
+  // { key: 'test13', label: '测试页13', title: '测试页13' },
+  // { key: 'app13', label: 'Navigation Two13', title: 'Navigation Two13' },
+  // { key: 'test14', label: '测试页14', title: '测试页14' },
+  // { key: 'app14', label: 'Navigation Two14', title: 'Navigation Two14' },
+  // { key: 'test15', label: '测试页15', title: '测试页15' },
+  // { key: 'app15', label: 'Navigation Two15', title: 'Navigation Two15' },
+  // { key: 'test16', label: '测试页16', title: '测试页16' },
+  // { key: 'app16', label: 'Navigation Two16', title: 'Navigation Two16' },
+  // { key: 'test17', label: '测试页17', title: '测试页17' },
+  // { key: 'app17', label: 'Navigation Two17', title: 'Navigation Two17' },
+  // { key: 'test18', label: '测试页18', title: '测试页18' },
+  // { key: 'app18', label: 'Navigation Two18', title: 'Navigation Two18' },
+  // { key: 'test19', label: '测试页19', title: '测试页19' },
+];
 
 // 在根组件中捕获错误，防止应用崩溃，返回 false
 onErrorCaptured((err: unknown, instance: ComponentPublicInstance | null, info: string) => {
@@ -39,3 +70,13 @@ onErrorCaptured((err: unknown, instance: ComponentPublicInstance | null, info: s
   return false;
 });
 </script>
+
+<style scoped lang="css">
+.menu {
+  width: 200px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.16);
+}
+</style>

@@ -1,10 +1,10 @@
 <template>
-  <div :class="'h-full w-full'">
-    <AppHeader>(Default-layout)</AppHeader>
+  <div>
+    <!-- <AppHeader>(Default-layout)</AppHeader> -->
 
     <slot></slot>
 
-    <AppFooter>(Default-layout)</AppFooter>
+    <!-- <AppFooter>(Default-layout)</AppFooter> -->
   </div>
 </template>
 

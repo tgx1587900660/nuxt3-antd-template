@@ -22,6 +22,28 @@ export default {
       auxiliary: '#ccc',
       green: {},
       uni: {},
+      blue: {
+        default: 'blue',
+        skyblue: 'skyblue',
+        hover: '#f0f0f0',
+        active: '#e6f4ff',
+        300: '#90cdf4',
+        400: '#63b3ed',
+        500: '#4299e1',
+        600: '#3182ce',
+      },
+      pink: {
+        default: 'deeppink',
+        100: '#fff5f7',
+        200: '#fed7e2',
+        300: '#fbb6ce',
+        400: '#f687b3',
+        500: '#ed64a6',
+        600: '#d53f8c',
+        700: '#b83280',
+        800: '#97266d',
+        900: '#702459',
+      },
     },
     // 添加字体
     fontFamily: {

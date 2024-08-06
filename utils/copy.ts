@@ -10,7 +10,8 @@
  * @see https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard/writeText
  */
 export let copyText = (text: string) => {
-  if (process.server) {
+  if (import.meta.server) {
+    console.warn('copyText 不支持服务端');
     return;
   }
 

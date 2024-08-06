@@ -1,5 +1,5 @@
 <template>
-  <div :class="'h-full w-full'">
+  <div class="home-content">
     测试 首页+自动导入组件 ------------
     <div>Welcome to the homepage</div>
     <AppAlert> This is an auto-imported component </AppAlert>

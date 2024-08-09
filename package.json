@@ -1,20 +1,26 @@
 {
   "name": "nuxt3-antd-template",
   "version": "1.0.0",
-  "description": "一个基于 nuxt3 和 Ant-Design-Vue 的模板项目",
-  "main": "index.js",
-  "author": "tangganxiao",
-  "license": "MIT",
   "private": true,
+  "description": "一个基于 nuxt3 和 Ant-Design-Vue 的模板项目",
+  "license": "MIT",
+  "author": "tangganxiao",
   "type": "module",
+  "main": "index.js",
   "scripts": {
+    "build": "nuxt build",
     "dev": "nuxt dev --host -p 2999",
     "dev-https": "nuxt dev --https -p 4000",
-    "build": "nuxt build",
-    "preview": "nuxt preview",
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
-    "prepare": "husky"
+    "prepare": "husky",
+    "preview": "nuxt preview",
+    "sort": "npx sort-package-json"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,vue}": [
+      "prettier --write --ignore-unknown"
+    ]
   },
   "dependencies": {
     "@ant-design-vue/nuxt": "^1.4.2",
@@ -34,11 +40,7 @@
     "postcss": "^8.4.40",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
+    "sort-package-json": "^2.10.0",
     "tailwindcss": "^3.4.7"
-  },
-  "lint-staged": {
-    "**/*.{js,ts,vue}": [
-      "prettier --write --ignore-unknown"
-    ]
   }
 }

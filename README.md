@@ -1,7 +1,7 @@
 # 安装使用
 
 ```bash
-pnpm i # 安装依赖xxx
+pnpm i # 安装依赖
 pnpm dev # 运行开发
 pnpm build # 打包
 pnpm preview # 预览 build 后的文件

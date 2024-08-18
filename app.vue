@@ -23,8 +23,8 @@ const items = [
   { key: '/demo-3', label: '依赖图片的尺寸大小不同，实现异形布局', to: '/demo-3' },
   { key: '/demo-4', label: 'Clipboard API - 实现自定义复制粘贴', to: '/demo-4' },
   { key: '/demo-5', label: '等比缩放的容器盒子', to: '/demo-5' },
+  { key: '/demo-6', label: 'pdf 在线预览', to: '/demo-6' },
 
-  // { key: 'app', label: 'Navigation Two', title: 'Navigation Two' },
   // { key: 'test2', label: '测试页2', title: '测试页2' },
   // { key: 'app2', label: 'Navigation Two2', title: 'Navigation Two2' },
   // { key: 'test3', label: '测试页3', title: '测试页3' },
@@ -64,7 +64,7 @@ const items = [
 
 // 在根组件中捕获错误，防止应用崩溃，返回 false
 onErrorCaptured((err: unknown, instance: ComponentPublicInstance | null, info: string) => {
-  console.dir(err);
+  console.log(err);
   console.log('instance :>> ', instance);
   console.log('info :>> ', info);
   return false;

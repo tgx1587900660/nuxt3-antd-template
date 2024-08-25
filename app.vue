@@ -64,7 +64,7 @@ const items = [
 
 // 在根组件中捕获错误，防止应用崩溃，返回 false
 onErrorCaptured((err: unknown, instance: ComponentPublicInstance | null, info: string) => {
-  console.log(err);
+  console.error(err);
   console.log('instance :>> ', instance);
   console.log('info :>> ', info);
   return false;

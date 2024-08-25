@@ -14,11 +14,11 @@
 
 <script setup lang="ts">
 type PropsType = {
-  paddingTop: string;
+  paddingTop?: string;
 };
 
 const props = withDefaults(defineProps<PropsType>(), {
-  paddingTop: '100%',
+  paddingTop: '75%',
 });
 </script>
 
@@ -36,6 +36,5 @@ const props = withDefaults(defineProps<PropsType>(), {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: skyblue;
 }
 </style>

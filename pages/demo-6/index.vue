@@ -37,7 +37,7 @@ let pdfjsLib = null;
 async function loadPdf() {
   pdfjsLib = await getPdfJs();
   // console.log('pdfjsLib :>> ', pdfjsLib);
-  const loadingTask = pdfjsLib.getDocument({ url: url });
+  const loadingTask = pdfjsLib.getDocument({ url: file });
   pdfDoc = await loadingTask.promise;
   totalPages.value = pdfDoc.numPages;
   renderPage(currentPage.value);

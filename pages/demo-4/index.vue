@@ -1,20 +1,27 @@
 <template>
-  <div class="px-5">
-    <p>
-      <label for="">即将复制：</label>
-      <strong id="text-box" class="text-[deeppink]"> 这是一段文本 xxxskljfsdjflsjdfl </strong>
-    </p>
-    <p>
-      <a-button @click="onCopy">复制文本</a-button>
-      <a-button @click="onPaste">粘贴文本</a-button>
-    </p>
-    <a-textarea id="paste-box" :rows="10" placeholder="请粘贴文本"></a-textarea>
-    <p></p>
-    <div>编辑器(这里可以粘贴图片)：</div>
-    <div
-      class="editor mb-4 min-h-[200px] border border-solid p-5 outline-none"
-      :contenteditable="true"
-      @paste="handlePaste"></div>
+  <div>
+    <AppHeader
+      :title="'自定义复制粘贴'"
+      :desc="'使用 Clipboard API 实现网页自定义复制粘贴功能，可以复制图片、文本、网址等等。'">
+    </AppHeader>
+
+    <div class="px-5">
+      <p>
+        <label for="">即将复制：</label>
+        <strong id="text-box" class="text-[deeppink]"> 这是一段文本 xxxskljfsdjflsjdfl </strong>
+      </p>
+      <p>
+        <a-button @click="onCopy">复制文本</a-button>
+        <a-button @click="onPaste">粘贴文本</a-button>
+      </p>
+      <a-textarea id="paste-box" :rows="10" placeholder="请粘贴文本"></a-textarea>
+      <p></p>
+      <div>编辑器(这里可以粘贴图片)：</div>
+      <div
+        class="editor mb-4 min-h-[200px] border border-solid p-5 outline-none"
+        :contenteditable="true"
+        @paste="handlePaste"></div>
+    </div>
   </div>
 </template>
 

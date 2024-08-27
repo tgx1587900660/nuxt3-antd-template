@@ -1,17 +1,22 @@
 <template>
-  <div class="h-full w-full transition duration-1000">
-    <div class="color-change-box w-full py-5">
-      <div class="m-auto flex w-[900px] flex-wrap gap-5">
-        <div v-for="(img, i) in imgs" :key="i" :class="'basis-[calc(50%-10px)] '">
-          <img
-            class="duration-800 w-full object-cover transition-transform hover:scale-105"
-            crossorigin="anonymous"
-            :style="{
-              opacity: curIndex === -1 || curIndex === i ? 1 : 0.3,
-            }"
-            :src="img"
-            @mouseenter="handleMouseEnter($event.target, i)"
-            @mouseleave="handleMouseLeave" />
+  <div>
+    <AppHeader :title="'提取图片的主色调,并应用到 div 容器的背景'" :desc="'使用 colorthief 依赖包 和 CSS 变量实现'">
+    </AppHeader>
+
+    <div class="h-full w-full transition duration-1000">
+      <div class="color-change-box w-full py-5">
+        <div class="m-auto flex w-[900px] flex-wrap gap-5">
+          <div v-for="(img, i) in imgs" :key="i" :class="'basis-[calc(50%-10px)]'">
+            <img
+              class="duration-800 w-full object-cover transition-transform hover:scale-105"
+              crossorigin="anonymous"
+              :style="{
+                opacity: curIndex === -1 || curIndex === i ? 1 : 0.3,
+              }"
+              :src="img"
+              @mouseenter="handleMouseEnter($event.target, i)"
+              @mouseleave="handleMouseLeave" />
+          </div>
         </div>
       </div>
     </div>

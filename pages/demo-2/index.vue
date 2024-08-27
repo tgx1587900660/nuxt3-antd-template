@@ -1,21 +1,26 @@
 <template>
-  <div class="flex flex-col items-center p-5">
-    <div>
-      <h1>使用纯css实现自定义单选框</h1>
-      <p>input是可替换元素，默认不可以修改样式</p>
-      <p>使用 伪元素:checked 和 相邻兄弟选择器 实现自定义单选框</p>
-    </div>
-    <div class="flex w-[200px] gap-10 border-solid border-[pink] p-5">
-      <label :class="'flex cursor-pointer items-center justify-center'">
-        <input class="input-native" type="radio" name="gender" id="" />
-        <span class="yuan"></span>
-        <span class="field">男 ♂</span>
-      </label>
-      <label :class="'flex cursor-pointer items-center justify-center'">
-        <input class="input-native" type="radio" name="gender" id="" />
-        <span class="yuan"></span>
-        <span class="field">女 ♀</span>
-      </label>
+  <div>
+    <AppHeader :title="'纯css自定义单选框样式'" :desc="'使用 伪元素:checked 和 相邻兄弟选择器 ~ 实现自定义单选框'">
+    </AppHeader>
+
+    <div class="flex flex-col items-center p-5">
+      <div>
+        <h1>使用纯css实现自定义单选框</h1>
+        <p>input是可替换元素，默认不可以修改样式</p>
+        <p>使用 伪元素:checked 和 相邻兄弟选择器 实现自定义单选框</p>
+      </div>
+      <div class="flex w-[200px] gap-10 border-solid border-[pink] p-5">
+        <label :class="'flex cursor-pointer items-center justify-center'">
+          <input class="input-native" type="radio" name="gender" id="" />
+          <span class="yuan"></span>
+          <span class="field">男 ♂</span>
+        </label>
+        <label :class="'flex cursor-pointer items-center justify-center'">
+          <input class="input-native" type="radio" name="gender" id="" />
+          <span class="yuan"></span>
+          <span class="field">女 ♀</span>
+        </label>
+      </div>
     </div>
   </div>
 </template>

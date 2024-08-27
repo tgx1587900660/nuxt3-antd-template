@@ -23,6 +23,9 @@ pnpm preview # 预览 build 后的文件
 12. onErrorCaptured 全局钩子函数捕获错误 + 惰性函数 - 2024.04.12
 13. contenteditable(可编辑元素) + Clipboard API 实现自定义复制粘贴文本/图片 - 2024.04.13
 14. 升级 nuxt 版本，解决 tailwindcss 在 css 中的 Unknown at rule 警告问题 - 2024.08.01
+15. 实现等比缩放的盒子 + 布局更新 - 2024.08.20
+16. 实现 pdf 在线预览 - 2024.08.24
+17. 实现 docx 在线预览 - 2024.08.27
 
 # demo 索引
 
@@ -41,3 +44,15 @@ pnpm preview # 预览 build 后的文件
 ## 4. demo4 —— contenteditable(可编辑元素) + Clipboard API - 实现自定义复制粘贴文本/图片
 
 ![demo-4](./assets/img/demo4/demo-4.gif)
+
+## 5. demo5 —— 等比缩放的盒子
+
+![demo-5](./assets/img/demo5/demo-5.gif)
+
+## 6. demo6 —— pdf 在线预览
+
+![demo-6](./assets/img/demo6/demo-6.gif)
+
+## 7. demo7 —— docx 在线预览
+
+![demo-7](./assets/img/demo7/demo-7.gif)

@@ -1,10 +1,14 @@
 <template>
-  <div class="pdf-container m-auto flex max-w-[900px] flex-col items-center" @scroll="handleScroll">
-    <canvas id="pdf-canvas" ref="canvas"></canvas>
-    <div class="controls">
-      <button @click="previousPage" :disabled="currentPage <= 1">上一页</button>
-      <span>第 {{ currentPage }} / {{ totalPages }} 页</span>
-      <button @click="nextPage" :disabled="currentPage >= totalPages">下一页</button>
+  <div>
+    <AppHeader :title="'在线预览 pdf，支持展示封面，支持翻页'" :desc="'使用 pdfjs-dist 依赖包 实现'"> </AppHeader>
+
+    <div class="pdf-container m-auto flex max-w-[900px] flex-col items-center" @scroll="handleScroll">
+      <canvas id="pdf-canvas" ref="canvas"></canvas>
+      <div class="controls">
+        <button @click="previousPage" :disabled="currentPage <= 1">上一页</button>
+        <span>第 {{ currentPage }} / {{ totalPages }} 页</span>
+        <button @click="nextPage" :disabled="currentPage >= totalPages">下一页</button>
+      </div>
     </div>
   </div>
 </template>

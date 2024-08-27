@@ -1,5 +1,7 @@
 <template>
   <div class="home-content">
+    <AppHeader :title="'测试 nuxt 自动导入组件 + tailwind + 环境变量'" :show-preText="false"> </AppHeader>
+
     测试 首页+自动导入组件 ------------
     <div>Welcome to the homepage</div>
     <AppAlert> This is an auto-imported component </AppAlert>

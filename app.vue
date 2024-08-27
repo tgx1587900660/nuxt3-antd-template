@@ -16,14 +16,15 @@
 
 <script setup lang="ts">
 const items = [
-  { key: '/', label: '测试自动导入组件 + tailwind + 环境变量', to: '/' },
-  { key: '/antd', label: '测试引入的ant-design-vue组件库', to: '/antd' },
-  { key: '/demo-1', label: '提取照片的主要色值，并应用到任意元素渐变背景', to: '/demo-1' },
-  { key: '/demo-2', label: '使用纯css实现自定义单选框', to: '/demo-2' },
-  { key: '/demo-3', label: '依赖图片的尺寸大小不同，实现异形布局', to: '/demo-3' },
-  { key: '/demo-4', label: 'Clipboard API - 实现自定义复制粘贴', to: '/demo-4' },
+  { key: '/', label: '测试 nuxt ', to: '/' },
+  { key: '/antd', label: '测试 ant-design-vue', to: '/antd' },
+  { key: '/demo-1', label: '提取图片的主色调', to: '/demo-1' },
+  { key: '/demo-2', label: '自定义单选框样式', to: '/demo-2' },
+  { key: '/demo-3', label: '图片异形布局', to: '/demo-3' },
+  { key: '/demo-4', label: '自定义复制粘贴', to: '/demo-4' },
   { key: '/demo-5', label: '等比缩放的容器盒子', to: '/demo-5' },
   { key: '/demo-6', label: 'pdf 在线预览', to: '/demo-6' },
+  { key: '/demo-7', label: 'docx 在线预览', to: '/demo-7' },
 
   // { key: 'test2', label: '测试页2', title: '测试页2' },
   // { key: 'app2', label: 'Navigation Two2', title: 'Navigation Two2' },

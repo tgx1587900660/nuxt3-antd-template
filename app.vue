@@ -2,11 +2,12 @@
   <a-extract-style>
     <NuxtLayout>
       <div class="flex">
-        <div class="menu">
+        <div
+          class="menu sticky left-0 top-0 h-[100vh] w-[250px] border-0 border-r border-solid border-[rgba(0,0,0,0.16)]">
           <TgxMenu :items="items"></TgxMenu>
         </div>
 
-        <div class="w-[calc(100%-200px)] flex-1">
+        <div class="w-[calc(100%-250px)] flex-1">
           <NuxtPage />
         </div>
       </div>
@@ -25,6 +26,7 @@ const items = [
   { key: '/demo-5', label: '等比缩放的容器盒子', to: '/demo-5' },
   { key: '/demo-6', label: 'pdf 在线预览', to: '/demo-6' },
   { key: '/demo-7', label: 'docx 在线预览', to: '/demo-7' },
+  { key: '/demo-8', label: '浏览器小窗口新开 tab', to: '/demo-8' },
 
   // { key: 'test2', label: '测试页2', title: '测试页2' },
   // { key: 'app2', label: 'Navigation Two2', title: 'Navigation Two2' },
@@ -72,12 +74,4 @@ onErrorCaptured((err: unknown, instance: ComponentPublicInstance | null, info: s
 });
 </script>
 
-<style scoped lang="css">
-.menu {
-  width: 200px;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.16);
-}
-</style>
+<style scoped lang="css"></style>

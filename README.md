@@ -26,6 +26,7 @@ pnpm preview # 预览 build 后的文件
 15. 实现等比缩放的盒子 + 布局更新 - 2024.08.20
 16. 实现 pdf 在线预览 - 2024.08.24
 17. 实现 docx 在线预览 - 2024.08.27
+18. 添加 浏览器小窗口新开 tab 功能 - 2024.09.02
 
 # demo 索引
 
@@ -56,3 +57,7 @@ pnpm preview # 预览 build 后的文件
 ## 7. demo7 —— docx 在线预览
 
 ![demo-7](./assets/img/demo7/demo-7.gif)
+
+## 8. demo8 —— 浏览器小窗口新开 tab 功能
+
+![demo-8](./assets/img/demo8/demo-8.gif)

@@ -3,12 +3,26 @@
     <AppHeader :title="'提取图片的主色调,并应用到 div 容器的背景'" :desc="'使用 colorthief 依赖包 和 CSS 变量实现'">
     </AppHeader>
 
-    <div class="h-full w-full transition duration-1000">
-      <div class="color-change-box w-full py-5">
-        <div class="m-auto flex w-[900px] flex-wrap gap-5">
-          <div v-for="(img, i) in imgs" :key="i" :class="'basis-[calc(50%-10px)]'">
+    <div class="mt-4 flex justify-center">
+      <tgx-button @click="reset">点击重置背景色</tgx-button>
+    </div>
+
+    <div
+      ref="divBoxRef"
+      class="mt-4 h-full w-full border-[10px] border-dashed border-pink-500"
+      :style="{
+        '--c1': '#fff',
+        '--c2': '#fff',
+        '--c3': '#fff',
+      }">
+      <div class="color-change-box p-5">
+        <div class="mx-auto flex max-w-[700px] flex-wrap gap-5">
+          <div
+            v-for="(img, i) in imgs"
+            :key="i"
+            class="inline-flex h-[280px] w-[340px] border border-solid border-[rgba(0,0,0,0.2)] text-[0]">
             <img
-              class="duration-800 w-full object-cover transition-transform hover:scale-105"
+              class="w-full object-cover"
               crossorigin="anonymous"
               :style="{
                 opacity: curIndex === -1 || curIndex === i ? 1 : 0.3,
@@ -25,7 +39,7 @@
 
 <script setup>
 import ColorThief from 'colorthief';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 
 const imgs = [];
 for (let i = 0; i < 4; i++) {
@@ -33,7 +47,7 @@ for (let i = 0; i < 4; i++) {
 }
 
 const curIndex = ref(-1);
-const html = ref();
+const divBoxRef = ref(null);
 
 async function handleMouseEnter(img, index) {
   // console.log('handleMouseEnter')
@@ -44,32 +58,32 @@ async function handleMouseEnter(img, index) {
   const colors = await colorThief.getPalette(img, 3); // img: 是img元素， 3:是跳过的像素来采样， https://lokeshdhakar.com/projects/color-thief/#api
   // console.log('colors :>> ', colors)
   const newColors = colors.map((c) => `rgb(${c[0]}, ${c[1]}, ${c[2]})`);
-  // console.log('newColors :>> ', newColors)
+  // console.log('newColors :>> ', newColors);
 
   // 设置3个主色值
-  html.value.style.setProperty('--c1', newColors[0]);
-  html.value.style.setProperty('--c2', newColors[1]);
-  html.value.style.setProperty('--c3', newColors[2]);
+  if (divBoxRef.value) {
+    divBoxRef.value.style.setProperty('--c1', newColors[0]);
+    divBoxRef.value.style.setProperty('--c2', newColors[1]);
+    divBoxRef.value.style.setProperty('--c3', newColors[2]);
+  }
 }
 
 function handleMouseLeave() {
   // console.log('handleMouseLeave')
   curIndex.value = -1;
-
-  html.value.style.setProperty('--c1', '#fff');
-  html.value.style.setProperty('--c2', '#fff');
-  html.value.style.setProperty('--c3', '#fff');
 }
 
-onMounted(() => {
-  html.value = document.documentElement;
-});
+const reset = () => {
+  if (divBoxRef.value) {
+    divBoxRef.value.style.setProperty('--c1', '#fff');
+    divBoxRef.value.style.setProperty('--c2', '#fff');
+    divBoxRef.value.style.setProperty('--c3', '#fff');
+  }
+};
 </script>
 
 <style lang="less" scoped>
 .color-change-box {
-  background: linear-gradient(to bottom, var(--c1), var(--c2), var(--c3));
-  // transition: all 0.8s;
-  // TODO 怎么给 color-change-box 的渐变背景设置一个过渡，而不是突然变色？
+  background-image: linear-gradient(to bottom, var(--c1), var(--c2), var(--c3));
 }
 </style>

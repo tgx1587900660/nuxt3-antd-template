@@ -27,6 +27,7 @@ pnpm preview # 预览 build 后的文件
 16. 实现 pdf 在线预览 - 2024.08.24
 17. 实现 docx 在线预览 - 2024.08.27
 18. 添加 浏览器小窗口新开 tab 功能 - 2024.09.02
+19. 实现 数字滚动动效 - 2024.09.08
 
 # demo 索引
 
@@ -61,3 +62,7 @@ pnpm preview # 预览 build 后的文件
 ## 8. demo8 —— 浏览器小窗口新开 tab 功能
 
 ![demo-8](./assets/img/demo8/demo-8.gif)
+
+## 9. demo9 —— 数字滚动动效
+
+![demo-9](./assets/img/demo9/demo-9.gif)

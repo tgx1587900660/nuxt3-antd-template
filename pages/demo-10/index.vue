@@ -13,8 +13,8 @@ npm i gsap
 </template>
 
 <script setup lang="ts">
-import CaseOne from '~/components/demo-9/Case1.vue';
-import CaseTwo from '~/components/demo-9/Case2.vue';
+import CaseOne from '~/components/demo-10/Case1.vue';
+import CaseTwo from '~/components/demo-10/Case2.vue';
 
 const list = [
   {

@@ -29,8 +29,8 @@ const items = [
   { key: '/demo-8', label: '浏览器小窗口新开 tab', to: '/demo-8' },
   { key: '/demo-9', label: '数字滚动效果', to: '/demo-9' },
   { key: '/demo-10', label: '抛物线飞跃特效（TODO...）', to: '/demo-10' },
+  { key: '/demo-11', label: '解决 transform 抖动问题', to: '/demo-11' },
 
-  // { key: 'test2', label: '测试页2', title: '测试页2' },
   // { key: 'app2', label: 'Navigation Two2', title: 'Navigation Two2' },
   // { key: 'test3', label: '测试页3', title: '测试页3' },
   // { key: 'app3', label: 'Navigation Two3', title: 'Navigation Two3' },

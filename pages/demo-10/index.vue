@@ -1,7 +1,7 @@
 npm i gsap
 <template>
   <div>
-    <AppHeader :title="'抛物线飞跃特效（TODO...）'" :desc="'使用 js 实现一个抛物线飞跃特效'"> </AppHeader>
+    <AppHeader :title="'用 js 实现抛物线飞跃特效（TODO...）'" :desc="'使用 js 实现一个抛物线飞跃特效'"> </AppHeader>
 
     <tgx-tab-list class="px-3 py-2" :list="list" @change="onChange"></tgx-tab-list>
 

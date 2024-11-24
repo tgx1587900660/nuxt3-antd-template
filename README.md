@@ -28,6 +28,8 @@ pnpm preview # 预览 build 后的文件
 17. 实现 docx 在线预览 - 2024.08.27
 18. 添加 浏览器小窗口新开 tab 功能 - 2024.09.02
 19. 实现 数字滚动动效 - 2024.09.08
+20. 实现 抛物线飞跃动画特效（TODO...）
+21. 解决 transform: translate 的 hover 抖动问题 - 2024.11.25
 
 # demo 索引
 
@@ -66,3 +68,9 @@ pnpm preview # 预览 build 后的文件
 ## 9. demo9 —— 数字滚动动效
 
 ![demo-9](./assets/img/demo9/demo-9.gif)
+
+## 10. demo10 —— 抛物线飞跃动画特效（TODO...）
+
+## 11. demo11 —— 解决 transform: translate 的 hover 抖动问题
+
+![demo-11](./assets/img/demo11/demo-11.gif)

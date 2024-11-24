@@ -28,7 +28,7 @@ const items = [
   { key: '/demo-7', label: 'docx 在线预览', to: '/demo-7' },
   { key: '/demo-8', label: '浏览器小窗口新开 tab', to: '/demo-8' },
   { key: '/demo-9', label: '数字滚动效果', to: '/demo-9' },
-  { key: '/demo-10', label: 'gsap 动画库使用', to: '/demo-10' },
+  { key: '/demo-10', label: '抛物线飞跃特效（TODO...）', to: '/demo-10' },
 
   // { key: 'test2', label: '测试页2', title: '测试页2' },
   // { key: 'app2', label: 'Navigation Two2', title: 'Navigation Two2' },

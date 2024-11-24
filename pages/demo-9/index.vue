@@ -1,6 +1,9 @@
 <template>
   <div>
-    <AppHeader :title="'数字滚动效果'" :desc="'封装了一个 animation 函数实现数字的滚动'"></AppHeader>
+    <AppHeader
+      :title="'数字滚动效果'"
+      :desc="'封装了一个 animation 函数实现数字的滚动。 使用 关键帧 requestAnimationFrame 实现。'">
+    </AppHeader>
 
     <div class="flex items-center gap-10 p-5">
       <tgx-button @click="add">go</tgx-button>

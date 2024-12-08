@@ -67,6 +67,12 @@ const items = [
   // { key: 'test19', label: '测试页19', title: '测试页19' },
 ];
 
+// 设置SEO
+useSeoMeta({
+  title: 'tgx-nuxt-project',
+  description: '一个简单的 nuxt3 探索项目',
+});
+
 // 在根组件中捕获错误，防止应用崩溃，返回 false
 onErrorCaptured((err: unknown, instance: ComponentPublicInstance | null, info: string) => {
   console.error(err);

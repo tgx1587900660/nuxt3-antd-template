@@ -1,7 +1,9 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: {
+    enabled: false,
+  },
 
   modules: [
     '@pinia/nuxt',
@@ -37,5 +39,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-08-02',
+  compatibilityDate: '2024-12-01',
 });

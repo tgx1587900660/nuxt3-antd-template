@@ -70,7 +70,7 @@ const items = [
 // 设置SEO
 useSeoMeta({
   title: 'tgx-nuxt-project',
-  description: '一个简单的 nuxt3 探索项目',
+  description: '一个简单的 nuxt3 模板项目, 测评各种 npm 包, 插件, 制作各种前端效果, 以便在千变万化的需求中快速完成工作',
 });
 
 // 在根组件中捕获错误，防止应用崩溃，返回 false

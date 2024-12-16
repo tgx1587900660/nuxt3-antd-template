@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHeader :title="'提取图片的主色调,并应用到 div 容器的背景'" :desc="'使用 colorthief 依赖包 和 CSS 变量实现'">
+    <AppHeader :title="'提取图片的主要颜色, 并应用到 div 容器的背景'" :desc="'使用 colorthief 依赖包 和 CSS 变量实现'">
     </AppHeader>
 
     <div class="mt-4 flex justify-center">
@@ -16,7 +16,7 @@
         '--c3': '#fff',
       }">
       <div class="color-change-box p-5">
-        <div class="mx-auto flex max-w-[700px] flex-wrap gap-5">
+        <div class="mx-auto flex max-w-[700px] flex-wrap gap-4">
           <div
             v-for="(img, i) in imgs"
             :key="i"
@@ -80,6 +80,11 @@ const reset = () => {
     divBoxRef.value.style.setProperty('--c3', '#fff');
   }
 };
+
+useSeoMeta({
+  title: `提取图片的主要颜色, 并应用到 div 容器的背景 ${seoDesc.titleTemplate}`,
+  description: `提取图片的主要颜色, 并应用到 div 容器的背景 ${seoDesc.description}`,
+});
 </script>
 
 <style lang="less" scoped>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader
-      :title="'浏览器小窗口新开 tab'"
+      :title="'浏览器新开小窗口 tab'"
       :desc="'使用 window.open 方法实现，可以防止窗口抖动，以增强用户体验，比如分享功能'">
     </AppHeader>
 
@@ -23,6 +23,8 @@
 </template>
 
 <script setup lang="ts">
+import { seoDesc } from '~/config/seo';
+
 const url = 'https://nuxt3-antd-template.vercel.app/';
 const title = 'nuxt3-antd-template';
 const link = `https://www.facebook.com/sharer.php?u=${url}&t=${title}`;
@@ -43,6 +45,11 @@ const onClick3 = () => {
     win.document.close();
   }
 };
+
+useSeoMeta({
+  title: `浏览器新开小窗口 ${seoDesc.titleTemplate}`,
+  description: `浏览器新开小窗口 ${seoDesc.description}`,
+});
 </script>
 
 <style lang="less" scoped></style>

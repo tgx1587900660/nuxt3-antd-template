@@ -13,6 +13,8 @@
 </template>
 
 <script setup lang="ts">
+import { seoDesc } from '~/config/seo';
+
 const count = ref(0);
 
 function animation({
@@ -54,13 +56,18 @@ function animation({
 function add() {
   animation({
     from: 0,
-    to: 4000,
-    duration: 2000,
+    to: 3000,
+    duration: 500,
     callback: (val: number) => {
       count.value = val;
     },
   });
 }
+
+useSeoMeta({
+  title: `数字滚动效果 ${seoDesc.titleTemplate}`,
+  description: `数字滚动效果 ${seoDesc.description}`,
+});
 </script>
 
 <style lang="less" scoped></style>

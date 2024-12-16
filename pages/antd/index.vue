@@ -3,7 +3,7 @@
     <AppHeader :title="'引入ant-design-vue 并解决刷新页面时的闪烁问题'" :desc="'借助 @ant-design-vue/nuxt 模块实现'">
     </AppHeader>
 
-    <div :class="'h-[3000px] w-full'">
+    <div :class="'h-[3000px] w-full p-5'">
       <div>
         <a-button @click="handleMessage"> button </a-button>
         <a-button @click="handleMessage2"> button2 </a-button>
@@ -69,7 +69,7 @@
       <hr />
 
       <a-dropdown>
-        <a class="ant-dropdown-link" @click.prevent> Hover me [[ 有 Hydration 警告问题 ]] </a>
+        <a class="ant-dropdown-link" @click.prevent> Hover me </a>
         <template #overlay :getPopupContainer="(node: any) => node.parentNode">
           <a-menu>
             <a-menu-item>
@@ -132,7 +132,8 @@
 </template>
 
 <script setup lang="ts">
-import { message } from 'ant-design-vue';
+import { seoDesc } from '@/config/seo';
+
 const handleMessage = () => {
   message.info('This is a normal message');
 };
@@ -149,6 +150,11 @@ const ellipsis = ref(true);
 const top = ref(100);
 
 const current = ref(3);
+
+useSeoMeta({
+  title: `在 nuxt 中集成 ant-design-vue ${seoDesc.titleTemplate}`,
+  description: `在 nuxt 中集成 ant-design-vue ${seoDesc.description}`,
+});
 </script>
 
 <style lang="less" scoped>

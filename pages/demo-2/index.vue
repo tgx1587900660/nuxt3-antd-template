@@ -25,7 +25,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { seoDesc } from '@/config/seo';
+
+useSeoMeta({
+  title: `纯css自定义单选框样式 ${seoDesc.titleTemplate}`,
+  description: `纯css自定义单选框样式 ${seoDesc.description}`,
+});
+</script>
 
 <style lang="css" scoped>
 .yuan {

@@ -17,6 +17,7 @@
 import { usePdfJs } from '@/components/file-preview/hooks/pdf';
 import type { PDFDocumentProxy } from 'pdfjs-dist';
 // import { type PDFDocumentProxy } from 'pdfjs-dist/types/src/display/api.d.ts';
+import { seoDesc } from '@/config/seo';
 
 const { getPdfJs } = usePdfJs();
 const file = new URL('./feiman.pdf', import.meta.url);
@@ -158,6 +159,11 @@ const handleScroll = () => {
     nextPage();
   }
 };
+
+useSeoMeta({
+  title: `前端在线预览 pdf ${seoDesc.titleTemplate}`,
+  description: `前端在线预览 pdf ${seoDesc.description}`,
+});
 
 onMounted(() => {
   loadPdf();

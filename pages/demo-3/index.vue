@@ -43,7 +43,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { seoDesc } from '@/config/seo';
+
+useSeoMeta({
+  title: `图片异形布局 ${seoDesc.titleTemplate}`,
+  description: `图片异形布局 ${seoDesc.description}`,
+});
+</script>
 
 <style lang="css" scoped>
 .content-box img {

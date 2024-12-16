@@ -30,8 +30,8 @@ const items = [
   { key: '/demo-9', label: '数字滚动效果', to: '/demo-9' },
   { key: '/demo-10', label: '抛物线飞跃特效（TODO...）', to: '/demo-10' },
   { key: '/demo-11', label: '解决 transform 抖动问题', to: '/demo-11' },
+  { key: '/demo-12', label: '视频插件', to: '/demo-12' },
 
-  // { key: 'app2', label: 'Navigation Two2', title: 'Navigation Two2' },
   // { key: 'test3', label: '测试页3', title: '测试页3' },
   // { key: 'app3', label: 'Navigation Two3', title: 'Navigation Two3' },
   // { key: 'test4', label: '测试页4', title: '测试页4' },

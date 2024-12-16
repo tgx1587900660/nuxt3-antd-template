@@ -16,6 +16,7 @@
 
 <script setup lang="ts">
 import { renderAsync } from 'docx-preview';
+import { seoDesc } from '~/config/seo';
 
 // function getFileByUrl() {
 //   return new Promise((resolve) => {
@@ -109,6 +110,11 @@ const openNewWindow = async () => {
   newWindow.document.write(`</body></html>`);
   newWindow.document.close();
 };
+
+useSeoMeta({
+  title: `前端在线预览 word, docx 文件 ${seoDesc.titleTemplate}`,
+  description: `前端在线预览 word, docx 文件 ${seoDesc.description}`,
+});
 </script>
 
 <style lang="less" scoped></style>

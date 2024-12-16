@@ -26,6 +26,8 @@
 </template>
 
 <script setup lang="ts">
+import { seoDesc } from '@/config/seo';
+
 // 点击事件复制文本
 function onCopy() {
   const el = document.getElementById('text-box');
@@ -88,6 +90,11 @@ function stopCopy(e: Event) {
   e.preventDefault();
   copyText('不准复制！！！！！！！');
 }
+
+useSeoMeta({
+  title: `Clipboard API 实现网页自定义复制粘贴功能 ${seoDesc.titleTemplate}`,
+  description: `Clipboard API 实现网页自定义复制粘贴功能 ${seoDesc.description}`,
+});
 
 onMounted(() => {
   document.addEventListener('copy', stopCopy);

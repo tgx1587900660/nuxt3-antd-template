@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader
-      :title="'等比缩放的盒子，适应不同宽度的设备，支持服务端渲染'"
+      :title="'等比缩放的盒子, 适应不同宽度的设备, 支持服务端渲染'"
       :desc="'使用 等比缩放的盒子 + 媒体查询 + css变量实现'">
     </AppHeader>
 
@@ -14,7 +14,7 @@
             width: `calc(100% / var(--w) - var(--gap)*(var(--w) - 1)/var(--w))`,
           }">
           <div class="h-full w-full overflow-hidden">
-            <img class="h-full w-full object-cover" src="./test.jpeg" alt="" />
+            <img class="h-full w-full object-cover" :src="TestJpeg" alt="" />
           </div>
         </RatioBox>
       </div>
@@ -22,7 +22,15 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TestJpeg from '@/assets/img/demo5/test.jpeg';
+import { seoDesc } from '@/config/seo';
+
+useSeoMeta({
+  title: `等比缩放的盒子, 适应不同宽度的设备, 支持服务端渲染 ${seoDesc.titleTemplate}`,
+  description: `等比缩放的盒子, 适应不同宽度的设备, 支持服务端渲染 ${seoDesc.description}`,
+});
+</script>
 
 <style lang="less" scoped>
 .items {

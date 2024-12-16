@@ -38,8 +38,8 @@
 </template>
 
 <script setup>
+import { seoDesc } from '@/config/seo';
 import ColorThief from 'colorthief';
-import { ref } from 'vue';
 
 const imgs = [];
 for (let i = 0; i < 4; i++) {

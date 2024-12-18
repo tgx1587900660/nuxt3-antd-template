@@ -40,4 +40,12 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2024-12-16',
+
+  runtimeConfig: {
+    githubToken: '', // 暂未用到
+  },
+
+  nitro: {
+    compressPublicAssets: { gzip: true },
+  },
 });

@@ -25,11 +25,122 @@
         </div>
       </div>
     </div>
+
+    <div class="mb-4 border border-x-0 border-solid border-[#e0e0e0] bg-[#fefefe] p-3">
+      <div>测试 server</div>
+      <a-button @click="onClickApiHello">/api/hello</a-button>
+      <a-button @click="testGetApi">/api/test</a-button>
+      <a-button @click="testPostApi">/api/test</a-button>
+      <a-button @click="testFooGetApi">/api/foo</a-button>
+      <a-button @click="testFooPostApi">/api/foo</a-button>
+      <a-button @click="testFooBarGetApi">/api/foo/bar</a-button>
+      <a-button @click="onSubmit">/api/submit</a-button>
+      <a-button @click="onQuery">/api/query</a-button>
+      <a-button @click="onValidateId">/api/validation/:12</a-button>
+      <a-button @click="onRuntimeConfig">/api/runtimeConfig</a-button>
+      <a-button @click="onClickCookie">/api/cookies</a-button>
+      <a-button @click="onFinishBgTask">/api/background-task</a-button>
+      <hr />
+      <pre>get: {{ apiHelloInfo }}</pre>
+      <hr />
+      <pre>get: {{ getApiInfo }}</pre>
+      <hr />
+      <pre>post: {{ postApiInfo }}</pre>
+      <hr />
+      <pre>get: {{ fooGetInfo }}</pre>
+      <hr />
+      <pre>post: {{ fooPostInfo }}</pre>
+      <hr />
+      <pre>post: {{ fooBargetInfo }}</pre>
+      <hr />
+      <pre>post: {{ submitBody }}</pre>
+      <hr />
+      <pre>get: {{ queryInfo }}</pre>
+      <hr />
+      <pre>get: {{ validateIdInfo }}</pre>
+      <hr />
+      <pre>get: {{ runtimeConfig }}</pre>
+      <hr />
+      <pre class="overflow-auto">get: {{ ck }}</pre>
+      <hr />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const appName = import.meta.env.VITE_APP_NAME;
+
+const apiHelloInfo = ref();
+const onClickApiHello = async () => {
+  const { data } = await useFetch('/api/hello');
+  console.log('data :>> ', data);
+  apiHelloInfo.value = data.value;
+};
+
+const getApiInfo = ref();
+const testGetApi = async () => {
+  const { data } = await useFetch('/api/test');
+  console.log('data :>> ', data);
+  getApiInfo.value = data.value;
+};
+const postApiInfo = ref();
+const testPostApi = async () => {
+  const { data } = await useFetch('/api/test', { method: 'post' });
+  console.log('data :>> ', data);
+  postApiInfo.value = data.value;
+};
+const fooGetInfo = ref();
+const testFooGetApi = async () => {
+  const { data } = await useFetch('/api/foo');
+  console.log('data :>> ', data);
+  fooGetInfo.value = data.value;
+};
+const fooPostInfo = ref();
+const testFooPostApi = async () => {
+  const { data } = await useFetch('/api/foo', { method: 'post' });
+  console.log('data :>> ', data);
+  fooPostInfo.value = data.value;
+};
+const fooBargetInfo = ref();
+const testFooBarGetApi = async () => {
+  const { data } = await useFetch('/api/foo/bar');
+  console.log('data :>> ', data);
+  fooBargetInfo.value = data.value;
+};
+const submitBody = ref();
+const onSubmit = async () => {
+  const res = await $fetch('/api/submit', {
+    method: 'post',
+    body: { test: 123456 },
+  });
+  console.log('res :>> ', res);
+  submitBody.value = res;
+};
+const queryInfo = ref();
+const onQuery = async () => {
+  const res = await $fetch('/api/query?foo=bar&baz=qux');
+  queryInfo.value = res;
+};
+const validateIdInfo = ref();
+const onValidateId = async () => {
+  const res = await $fetch('/api/validation/12');
+  // const res = await $fetch('/api/validation/xxxx');
+  validateIdInfo.value = res;
+};
+const runtimeConfig = ref();
+const onRuntimeConfig = async () => {
+  const res = await $fetch('/api/runtimeConfig');
+  validateIdInfo.value = res;
+};
+const ck = ref();
+const onClickCookie = async () => {
+  const res = await $fetch('/api/cookies');
+  ck.value = res;
+};
+const onFinishBgTask = async () => {
+  const res = await $fetch('/api/background-task');
+  console.log('res :>> ', res);
+};
 </script>
 
 <style lang="less" scoped></style>

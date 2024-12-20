@@ -30,6 +30,7 @@
     "colorthief": "^2.4.0",
     "docx-preview": "^0.3.2",
     "gsap": "^3.12.5",
+    "nodemailer": "^6.9.16",
     "nuxt": "^3.14.1592",
     "pdfjs-dist": "^4.5.136",
     "vue": "^3.5.13",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.6.4",
+    "@types/nodemailer": "^6.4.17",
     "autoprefixer": "^10.4.19",
     "husky": "^9.0.11",
     "less": "^4.2.0",

@@ -3,20 +3,20 @@ import nodemailer from 'nodemailer';
 const user = import.meta.env.VITE_APP_NAME;
 const pass = import.meta.env.VITE_APP_PASS;
 const transporter = nodemailer.createTransport({
-  // host: 'smtp.ethereal.email',
-  // port: 587, // 587 or 465
-  // secure: false, // true for port 465, false for other ports
-  // auth: {
-  //   user: 'maddison53@ethereal.email',
-  //   pass: 'jn7jnAPss4f63QBp6D',
-  // },
-  host: 'smtp.qq.com',
-  port: 465,
-  secure: true,
+  host: 'smtp.ethereal.email',
+  port: 587, // 587 or 465
+  secure: false, // true for port 465, false for other ports
   auth: {
-    user: user, // 登录邮箱(这个必须跟from中的地址一致)
-    pass: pass, // 登录密码
+    user: user,
+    pass: pass,
   },
+  // host: 'smtp.qq.com',
+  // port: 465,
+  // secure: true,
+  // auth: {
+  //   user: user, // 登录邮箱(这个必须跟from中的地址一致)
+  //   pass: pass, // 登录密码
+  // },
 });
 
 /**
@@ -30,10 +30,10 @@ export default defineEventHandler(async (event) => {
   async function main() {
     // send mail with defined transport object
     const info = await transporter.sendMail({
-      from: `"Maddison Foo Koch 👻" <${user}>`, // 这个地址必须跟 auth.user 一致
-      to: 'tangganxiao@gmail.com,tangganxiao@makeblock.com', // 单个或列表用逗号分隔
+      from: `"Maddison Foo Koch 👻" <${user}>`, // from 必须跟 auth.user 一致
+      to: 'tangganxiao@gmail.com', // 单个或列表用逗号分隔, eg: '123@qq.com,456@qq.com'
       subject: 'Hello ✔', // Subject line
-      // text: 'Hello world?', // plain text body
+      text: 'Hello world?', // plain text body
       html: '<b>Hello world? 反反复复反反复复反反复复反反复复方法</b>', // html body
     });
 

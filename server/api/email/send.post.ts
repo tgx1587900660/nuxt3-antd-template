@@ -14,8 +14,8 @@ const transporter = nodemailer.createTransport({
   // port: 465,
   // secure: true,
   // auth: {
-  //   user: user, // 登录邮箱(这个必须跟from中的地址一致)
-  //   pass: pass, // 登录密码
+  //   user: user, // qq邮箱
+  //   pass: pass, // 授权码
   // },
 });
 

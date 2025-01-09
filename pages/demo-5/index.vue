@@ -1,8 +1,6 @@
 <template>
   <div>
-    <AppHeader
-      :title="'等比缩放的盒子, 适应不同宽度的设备, 支持服务端渲染'"
-      :desc="'使用 等比缩放的盒子 + 媒体查询 + css变量实现'">
+    <AppHeader :title="'等比缩放的盒子, 适应不同宽度的设备'" :desc="'使用 等比缩放的盒子 + 媒体查询 + css变量实现'">
     </AppHeader>
 
     <div class="m-auto max-w-[1400px] p-5">
@@ -23,8 +21,8 @@
 </template>
 
 <script setup lang="ts">
-import TestJpeg from '@/assets/img/demo5/test.jpeg';
 import { seoDesc } from '@/config/seo';
+import TestJpeg from '~/assets/img/common/test.jpeg';
 
 useSeoMeta({
   title: `等比缩放的盒子, 适应不同宽度的设备, 支持服务端渲染 ${seoDesc.titleTemplate}`,

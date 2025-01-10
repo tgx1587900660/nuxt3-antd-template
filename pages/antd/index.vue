@@ -4,6 +4,15 @@
     </AppHeader>
 
     <div :class="'h-[3000px] w-full p-5'">
+      <div class="mb-4">
+        <b>icon-font 测试: </b>
+        <div class="flex gap-2 border border-solid border-pink-500">
+          <icon-font type="icon-left-circle-fill" />
+          <icon-font type="icon-check" />
+        </div>
+      </div>
+
+      <hr />
       <div>
         <a-button @click="handleMessage"> button </a-button>
         <a-button @click="handleMessage2"> button2 </a-button>

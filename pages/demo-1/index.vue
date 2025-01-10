@@ -56,7 +56,7 @@ async function handleMouseEnter(img, index) {
   const colorThief = new ColorThief();
   // console.log('colorThief :>> ', colorThief)
   const colors = await colorThief.getPalette(img, 3); // img: 是img元素， 3:是跳过的像素来采样， https://lokeshdhakar.com/projects/color-thief/#api
-  // console.log('colors :>> ', colors)
+  // console.log('colors :>> ', colors);
   const newColors = colors.map((c) => `rgb(${c[0]}, ${c[1]}, ${c[2]})`);
   // console.log('newColors :>> ', newColors);
 

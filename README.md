@@ -33,6 +33,7 @@ pnpm preview # 预览 build 后的文件
 22. 添加 视频播放器 (TODO)
 23. 添加 富文本编辑器 (TODO)
 24. 添加 邮件发送功能 (nodemailer 和 @types/nodemailer(提供ts类型支持), 一同维护版本)
+25. 添加 @nuxt/icon (解决 iconfont 图标在刷新页面后的闪烁问题)
 
 # demo 索引
 

@@ -25,6 +25,7 @@
   "dependencies": {
     "@ant-design-vue/nuxt": "^1.4.6",
     "@ant-design/icons-vue": "^7.0.1",
+    "@nuxt/icon": "1.10.3",
     "@pinia/nuxt": "^0.5.3",
     "ant-design-vue": "^4.2.6",
     "colorthief": "^2.6.0",

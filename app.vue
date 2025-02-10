@@ -17,8 +17,9 @@
 
 <script setup lang="ts">
 const items = [
-  { key: '/', label: '测试 nuxt ', to: '/' },
+  { key: '/', label: '测试 nuxt 自动导入组件 + tailwind + 环境变量', to: '/' },
   { key: '/antd', label: '测试 ant-design-vue', to: '/antd' },
+  { key: '/nuxt-icon', label: '测试 @nuxt/icon', to: '/nuxt-icon' },
   { key: '/demo-1', label: '1. 提取图片的主色调', to: '/demo-1' },
   { key: '/demo-2', label: '2. 自定义单选框样式', to: '/demo-2' },
   { key: '/demo-3', label: '3. 图片异形布局', to: '/demo-3' },

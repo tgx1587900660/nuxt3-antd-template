@@ -7,14 +7,15 @@ export default defineNuxtConfig({
 
   modules: ['@pinia/nuxt', '@ant-design-vue/nuxt', '@nuxt/icon'],
 
-  // icon: {
-  //   customCollections: [
-  //     {
-  //       prefix: 'my-icon',
-  //       dir: './assets/my-icons',
-  //     },
-  //   ],
-  // },
+  icon: {
+    customCollections: [
+      {
+        prefix: 'my-icon',
+        dir: './assets/my-icons',
+        normalizeIconName: false,
+      },
+    ],
+  },
 
   antd: {
     extractStyle: true,

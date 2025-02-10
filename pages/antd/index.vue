@@ -4,50 +4,6 @@
     </AppHeader>
 
     <div :class="'h-[3000px] w-full p-5'">
-      <div class="mb-4">
-        <b>icon-font 测试: </b>
-        <div class="flex gap-2 border border-solid border-pink-500">
-          <icon-font type="icon-left-circle-fill" />
-          <icon-font type="icon-check" />
-        </div>
-      </div>
-
-      <div class="mb-4">
-        <b>@nuxt/icon 测试: </b>
-        <div class="border border-solid border-pink-500">
-          <p>
-            <Icon name="uil:github" />
-            <Icon name="NuxtLogo" size="24" />
-            <Icon name="my-icon:like-fill" />
-          </p>
-
-          <p>
-            Icon name:
-            <a-input v-model="icon" placeholder="Icon name" />
-            <a href="https://icones.js.org/" target="_blank">icones.js.org</a>
-          </p>
-          <p>
-            Different sizes:
-            <Icon :name="icon" />
-            <Icon :name="icon" size="24" />
-            <Icon :name="icon" size="48" />
-          </p>
-          <div>
-            Custom component: （从components/my-icons里面取）
-            <Icon name="NuxtIcon" />
-            <Icon name="NuxtIcon" size="24" />
-            <Icon name="NuxtIcon" size="48" />
-          </div>
-          <div>
-            Emoji:
-            <Icon name="🚀" />
-            <Icon name="🚀" size="24" />
-            <Icon name="🚀" size="48" />
-          </div>
-          <p>Render function: <MyIcon /></p>
-        </div>
-      </div>
-
       <hr />
       <div>
         <a-button @click="handleMessage"> button </a-button>
@@ -177,7 +133,6 @@
 </template>
 
 <script setup lang="ts">
-import { Icon } from '#components';
 import { seoDesc } from '@/config/seo';
 
 const handleMessage = () => {
@@ -201,10 +156,6 @@ useSeoMeta({
   title: `在 nuxt 中集成 ant-design-vue ${seoDesc.titleTemplate}`,
   description: `在 nuxt 中集成 ant-design-vue ${seoDesc.description}`,
 });
-
-const icon = ref('uil:github');
-
-const MyIcon = h(Icon, { name: 'uil-twitter' });
 </script>
 
 <style lang="less" scoped>

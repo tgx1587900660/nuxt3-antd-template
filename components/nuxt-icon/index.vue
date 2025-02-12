@@ -15,10 +15,10 @@
       <div class="border border-solid border-pink-500">
         <p class="flex items-center gap-2">
           <Icon name="uil:github" size="18" class="text-pink-500" />
-          <Icon name="NuxtLogo" size="18" class="text-pink-500" />
-          <Icon name="my-icon:like-fill" class="text-pink-500" />
-          <Icon name="my-icon:close" class="text-pink-500" />
-          <Icon name="my-icon:spider" class="text-pink-500" />
+          <Icon name="NuxtLogo" size="18" class="text-[#80c]" />
+          <Icon name="my-icon:like-fill" class="text-[skyblue]" />
+          <Icon name="my-icon:close" class="text-[red]" />
+          <Icon name="my-icon:spider" class="" />
         </p>
 
         <p class="mt-4 flex gap-2">
@@ -49,7 +49,7 @@ import { Icon } from '#components';
 
 const inputIcon = ref('uil:github');
 
-const MyIcon = h(Icon, { name: 'uil-twitter' });
+const MyIcon = h(Icon, { name: 'my-icon:close' });
 </script>
 
 <style lang="less" scoped></style>

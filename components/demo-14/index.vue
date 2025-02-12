@@ -18,11 +18,16 @@
 async function onSend() {
   // drawerRef.value?.open();
 
-  const res = await $fetch('api/email/send', {
+  const res = (await $fetch('api/email/send', {
     method: 'post',
     body: { test: 123456 },
-  });
+  })) as any;
   console.log('res :>> ', res);
+  if (res.code === 200) {
+    message.success(res.message);
+  } else {
+    message.error(res.message);
+  }
 }
 </script>
 

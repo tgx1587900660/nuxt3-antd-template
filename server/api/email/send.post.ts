@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-const user = import.meta.env.VITE_APP_NAME;
+const user = import.meta.env.VITE_APP_USER;
 const pass = import.meta.env.VITE_APP_PASS;
 const transporter = nodemailer.createTransport({
   host: 'smtp.ethereal.email',
@@ -24,9 +24,6 @@ const transporter = nodemailer.createTransport({
  * method: post
  */
 export default defineEventHandler(async (event) => {
-  // console.log('nodemailer :>> ', nodemailer);
-
-  // async..await is not allowed in global scope, must use a wrapper
   async function main() {
     // send mail with defined transport object
     const info = await transporter.sendMail({

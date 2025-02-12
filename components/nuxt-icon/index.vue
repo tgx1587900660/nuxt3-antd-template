@@ -14,11 +14,11 @@
       <b>@nuxt/icon（解决闪烁问题）: </b>
       <div class="border border-solid border-pink-500">
         <p class="flex items-center gap-2">
-          <Icon name="uil:github" size="18" />
-          <Icon name="NuxtLogo" size="18" />
-          <Icon name="my-icon:like-fill" />
-          <Icon name="my-icon:close" />
-          <Icon name="my-icon:spider" />
+          <Icon name="uil:github" size="18" class="text-pink-500" />
+          <Icon name="NuxtLogo" size="18" class="text-pink-500" />
+          <Icon name="my-icon:like-fill" class="text-pink-500" />
+          <Icon name="my-icon:close" class="text-pink-500" />
+          <Icon name="my-icon:spider" class="text-pink-500" />
         </p>
 
         <p class="mt-4 flex gap-2">
@@ -31,7 +31,7 @@
           <span>当前 icon 名称: {{ inputIcon }}</span>
           <Icon :name="inputIcon" />
           <Icon :name="inputIcon" size="24" />
-          <Icon :name="inputIcon" size="48" />
+          <Icon :name="inputIcon" size="48" class="text-[#ccc]" />
         </p>
         <div class="flex items-center gap-2">
           <span>全局注册组件:（从components/global/里面取）</span>

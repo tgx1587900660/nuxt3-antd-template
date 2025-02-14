@@ -50,3 +50,8 @@
   .ck-editor__editable {
   border-radius: 0;
 }
+
+/* 隐藏powered by balloon */
+.ck.ck-balloon-panel.ck-powered-by-balloon {
+  display: none !important;
+}

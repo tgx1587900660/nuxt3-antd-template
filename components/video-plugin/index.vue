@@ -7,6 +7,13 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { seoDesc } from '~/config/seo';
+
+useSeoMeta({
+  title: `前端视频播放器的选取 ${seoDesc.titleTemplate}`,
+  description: `前端视频播放器的选取 ${seoDesc.description}`,
+});
+</script>
 
 <style lang="less" scoped></style>

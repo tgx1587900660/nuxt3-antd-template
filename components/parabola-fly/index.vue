@@ -1,4 +1,3 @@
-npm i gsap
 <template>
   <div>
     <AppHeader :title="'用 js 实现抛物线飞跃效果（TODO...）'" :desc="'使用 js 实现一个抛物线飞跃效果'"> </AppHeader>
@@ -13,9 +12,9 @@ npm i gsap
 </template>
 
 <script setup lang="ts">
-import CaseOne from '~/components/demo-10/Case1.vue';
-import CaseTwo from '~/components/demo-10/Case2.vue';
 import { seoDesc } from '~/config/seo';
+import CaseOne from './Case1.vue';
+import CaseTwo from './Case2.vue';
 
 const list = [
   { key: 'tab1', label: 'tab1' },

@@ -2,32 +2,34 @@
   <div>
     <AppHeader :title="'邮件发送功能'" :desc="'基于 nodemailer 实现'" />
 
-    <div>
-      <span>选择发送的方式「「」」</span>
-      <a-button @click="onSend">发送</a-button>
+    <div class="flex items-center gap-2 p-4">
+      <a-button @click="onConfig">配置</a-button>
+      <a-button type="primary" @click="onSend">发送</a-button>
     </div>
 
-    <!-- <OptDrawer ref="drawerRef"></OptDrawer> -->
+    <OptDrawer ref="drawerRef"></OptDrawer>
   </div>
 </template>
 
 <script lang="ts" setup>
-// import OptDrawer from './OptDrawer.vue';
+import OptDrawer from './OptDrawer.vue';
 
-// const drawerRef = ref();
 async function onSend() {
-  // drawerRef.value?.open();
-
-  const res = (await $fetch('api/email/send', {
+  const res: any = await $fetch('api/email/send', {
     method: 'post',
     body: { test: 123456 },
-  })) as any;
+  });
   console.log('res :>> ', res);
   if (res.code === 200) {
     message.success(res.message);
   } else {
     message.error(res.message);
   }
+}
+
+const drawerRef = useTemplateRef('drawerRef');
+function onConfig() {
+  drawerRef.value?.open();
 }
 </script>
 

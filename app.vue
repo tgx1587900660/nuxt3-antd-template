@@ -26,14 +26,14 @@ const items = [
   { key: '/copy', label: '复制粘贴', to: '/copy' },
   { key: '/ratio-box-test', label: '等比缩放的盒子', to: '/ratio-box-test' },
   { key: '/pdf-view', label: '在线预览 pdf', to: '/pdf-view' },
-  { key: '/demo-7', label: '7. 在线预览 docx', to: '/demo-7' },
-  { key: '/demo-8', label: '8. 浏览器小窗口新开 tab', to: '/demo-8' },
-  { key: '/demo-9', label: '9. 数字滚动效果', to: '/demo-9' },
-  { key: '/demo-10', label: '10. 抛物线飞跃效果（TODO...）', to: '/demo-10' },
-  { key: '/demo-11', label: '11. hover 抖动问题', to: '/demo-11' },
-  { key: '/demo-12', label: '12. 视频播放插件', to: '/demo-12' },
-  { key: '/demo-13', label: '13. 富文本编辑器', to: '/demo-13' },
-  { key: '/demo-14', label: '14. 邮件发送功能', to: '/demo-14' },
+  { key: '/docx-view', label: '在线预览 docx', to: '/docx-view' },
+  { key: '/new-windows', label: '浏览器小窗口新开 tab', to: '/new-windows' },
+  { key: '/number-scroll', label: '数字滚动效果', to: '/number-scroll' },
+  { key: '/parabola-fly', label: '抛物线飞跃效果（TODO...）', to: '/parabola-fly' },
+  { key: '/hover-shake', label: 'hover 抖动问题', to: '/hover-shake' },
+  { key: '/video-plugin', label: '视频播放插件', to: '/video-plugin' },
+  { key: '/rich-text-editor', label: '富文本编辑器', to: '/rich-text-editor' },
+  { key: '/email-send', label: '邮件发送功能', to: '/email-send' },
 ];
 
 // 设置SEO

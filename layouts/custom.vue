@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHeader>(Custom-layout)</AppHeader>
+    <AppHeader title="Custom-layout" desc="Custom-layout"></AppHeader>
 
     <slot></slot>
   </div>

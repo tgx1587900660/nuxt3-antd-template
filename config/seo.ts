@@ -2,9 +2,8 @@
 export const seoDesc = {
   titleTemplate: 'nuxt3 模版',
   description:
-    'nuxt3 模版 | 唐干宵 的博客| 唐干宵 的网络日志|谭竿霄 的博客|谭竿霄 的网络日志|tgx 的博客|tgx 的网络日志|使用 vitepress 搭建的个人博客',
-  extraDesc:
-    'nuxt3 模版 | 唐干宵 的博客| 唐干宵 的网络日志|谭竿霄 的博客|谭竿霄 的网络日志|tgx 的博客|tgx 的网络日志|使用 vitepress 搭建的个人博客',
+    'nuxt3 模版 | 唐干宵 的博客| 唐干宵 的网络日志|谭竿霄 的博客|谭竿霄 的网络日志|tgx 的博客|tgx 的网络日志 ',
+  extraDesc: 'nuxt3 模版 | 唐干宵 的博客| 唐干宵 的网络日志|谭竿霄 的博客|谭竿霄 的网络日志|tgx 的博客|tgx 的网络日志 ',
   h1: 'nuxt3 templete 模版项目',
   ogImage: 'https://tgx1587900660.github.io/tgx-blog-vitepress/logo2.jpg',
 };

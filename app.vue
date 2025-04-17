@@ -34,12 +34,13 @@ const items = [
   { key: '/video-plugin', label: '视频播放插件', to: '/video-plugin' },
   { key: '/rich-text-editor', label: '富文本编辑器', to: '/rich-text-editor' },
   { key: '/email-send', label: '邮件发送功能', to: '/email-send' },
+  { key: '/lrc-scroll', label: '歌词滚动效果', to: '/lrc-scroll' },
 ];
 
 // 设置SEO
 useSeoMeta({
   title: 'tgx-nuxt-project',
-  description: '一个简单的 nuxt3 模板项目, 测评各种 npm 包, 插件, 制作各种前端效果, 以便在千变万化的需求中快速完成工作',
+  description: '一个简单的 nuxt3 模板项目, 测评各种 npm 包, 插件, 制作各种前端效果',
 });
 
 // 在根组件中捕获错误，防止应用崩溃，返回 false

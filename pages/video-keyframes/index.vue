@@ -1,5 +1,5 @@
 <template>
   <div>
-    <VideoPlugin />
+    <VideoKeyframes />
   </div>
 </template>

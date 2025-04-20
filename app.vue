@@ -31,7 +31,7 @@ const items = [
   { key: '/number-scroll', label: '数字滚动效果', to: '/number-scroll' },
   { key: '/parabola-fly', label: '抛物线飞跃效果（TODO...）', to: '/parabola-fly' },
   { key: '/hover-shake', label: 'hover 抖动问题', to: '/hover-shake' },
-  { key: '/video-plugin', label: '视频播放插件', to: '/video-plugin' },
+  { key: '/video-keyframes', label: '获取视频关键帧', to: '/video-keyframes' },
   { key: '/rich-text-editor', label: '富文本编辑器', to: '/rich-text-editor' },
   { key: '/email-send', label: '邮件发送功能', to: '/email-send' },
   { key: '/lrc-scroll', label: '歌词滚动效果', to: '/lrc-scroll' },

@@ -1,20 +1,23 @@
 <template>
   <div>
-    <AppHeader :title="'用 js 实现抛物线飞跃效果（TODO...）'" :desc="'使用 js 实现一个抛物线飞跃效果'"> </AppHeader>
+    <AppHeader
+      :title="'用 js 实现抛物线飞跃效果'"
+      :desc="'原理是使用2个元素,父元素控制水平运动,子元素控制垂直运动,从而实现抛物线运动'">
+    </AppHeader>
 
     <tgx-tab-list class="px-3 py-2" :list="list" @change="onChange"></tgx-tab-list>
 
     <hr />
 
-    <CaseOne v-if="activeTabKey === 'tab1'" />
-    <CaseTwo v-if="activeTabKey === 'tab2'" />
+    <Case1 v-if="activeTabKey === 'tab1'" />
+    <Case2 v-if="activeTabKey === 'tab2'" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { seoDesc } from '~/config/seo';
-import CaseOne from './Case1.vue';
-import CaseTwo from './Case2.vue';
+import Case1 from './Case1.vue';
+import Case2 from './Case2.vue';
 
 const list = [
   { key: 'tab1', label: 'tab1' },

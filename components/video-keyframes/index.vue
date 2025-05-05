@@ -4,7 +4,7 @@
 
     <div class="mt-6 flex flex-col gap-4 p-4">
       <input type="file" name="file" accept="video/*" id="file" @change="onGetKeyframe" />
-      <a-button class="w-[200px]" type="primary" @click="onCapture">获取关键帧</a-button>
+      <!-- <a-button class="w-[200px]" type="primary" @click="onCapture">获取关键帧</a-button> -->
       <div id="keyframe-box"></div>
     </div>
   </div>
@@ -14,6 +14,7 @@
 let file: File | null = null;
 const onGetKeyframe = (e: Event) => {
   file = (e.target as HTMLInputElement).files?.[0] ?? null;
+  onCapture();
 };
 
 const onCapture = async () => {
@@ -22,14 +23,12 @@ const onCapture = async () => {
     return;
   }
   const wrapper = document.getElementById('keyframe-box');
-  for (let i = 0; i < 15; i++) {
-    const data = (await captureFrame(file, i)) as unknown as { url: string; blob: Blob | null };
+  for (let i = 0; i < 20; i++) {
+    const data = (await captureFrame(file, i * 10)) as { url: string; blob: Blob | null };
     // console.log('data :>> ', data);
     const img = document.createElement('img');
-    img.src = data?.url ?? '';
-    img.classList.add('img');
-    img.style.width = '200px';
-    img.style.height = '100px';
+    img.src = data.url ?? '';
+    img.width = 250;
     img.style.border = '2px dashed #ccc';
     img.style.padding = '10px';
     wrapper?.appendChild(img);
@@ -47,8 +46,6 @@ function captureFrame(file: File, time: number) {
     // console.log('file :>> ', file);
     // console.log('time :>> ', time);
     const vdo = document.createElement('video');
-    vdo.width = 200;
-    vdo.height = 100;
     vdo.autoplay = true; // 自动播放
     vdo.muted = true; // 静音播放
     vdo.currentTime = time; // 设置当前时间
@@ -60,6 +57,7 @@ function captureFrame(file: File, time: number) {
       canvas.height = vdo.videoHeight;
       ctx?.drawImage(vdo, 0, 0, canvas.width, canvas.height);
 
+      // 直接在页面中显示
       // const wrapper = document.getElementById('keyframe-box');
       // console.log('wrapper :>> ', wrapper);
       // if (!wrapper) {
@@ -67,6 +65,7 @@ function captureFrame(file: File, time: number) {
       // }
       // wrapper.appendChild(canvas);
 
+      // 获取 blob
       canvas.toBlob((blob) => {
         if (!blob) {
           throw new Error('无法获取视频关键帧');

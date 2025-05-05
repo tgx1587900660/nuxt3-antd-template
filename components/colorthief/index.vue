@@ -17,20 +17,25 @@
       }">
       <div class="color-change-box p-5">
         <div class="mx-auto flex max-w-[700px] flex-wrap gap-4">
-          <div
-            v-for="(img, i) in imgs"
-            :key="i"
-            class="inline-flex h-[280px] w-[340px] border border-solid border-[rgba(0,0,0,0.2)] text-[0]">
-            <img
-              class="w-full object-cover"
-              crossorigin="anonymous"
-              :style="{
-                opacity: curIndex === -1 || curIndex === i ? 1 : 0.3,
-              }"
-              :src="img"
-              @mouseenter="handleMouseEnter($event.target, i)"
-              @mouseleave="handleMouseLeave" />
-          </div>
+          <ClientOnly>
+            <template #fallback>
+              <div class="flex h-full w-full items-center justify-center">loading...</div>
+            </template>
+            <div
+              v-for="(img, i) in imgs"
+              :key="i"
+              class="inline-flex h-[280px] w-[340px] border border-solid border-[rgba(0,0,0,0.2)] text-[0]">
+              <img
+                class="w-full object-cover"
+                crossorigin="anonymous"
+                :style="{
+                  opacity: curIndex === -1 || curIndex === i ? 1 : 0.3,
+                }"
+                :src="img"
+                @mouseenter="handleMouseEnter($event.target, i)"
+                @mouseleave="handleMouseLeave" />
+            </div>
+          </ClientOnly>
         </div>
       </div>
     </div>

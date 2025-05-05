@@ -30,53 +30,10 @@ pnpm preview # 预览 build 后的文件
 19. 实现 docx 在线预览功能, (一同维护 docx-preview 的版本) - 2024.08.27
 20. 添加 浏览器小窗口新开 tab 功能 - 2024.09.02
 21. 实现 数字滚动动效 - 2024.09.08
-22. 实现 抛物线飞跃动画特效 (TODO)
-23. 解决 transform: translate 的 hover 抖动问题 - 2024.11.25
-24. 添加 视频播放器 (TODO)
-25. 添加 富文本编辑器 (一同维护 @ckeditor/ckeditor5-vue, ckeditor5 的版本) - 2025.02.18
-26. 添加 邮件发送功能 (一同维护 nodemailer, @types/nodemailer 的版本) - 2025.02.18
-27. 解决 iconfont 图标在刷新页面后的闪烁问题, (一同维护 @nuxt/icon 的版本) - 2025.02.18
-
-# demo 索引
-
-## 1. demo1 —— 使用 colorthief 提取图片色彩，并设置成渐变背景到任意元素
-
-![demo-1](./assets/img/demo1/demo-1.gif)
-
-## 2. demo2 —— 使用 :checked 伪类 + label + 相邻兄弟选择器(~) 实现自定义单选框样式
-
-![demo-2](./assets/img/demo2/demo-2.gif)
-
-## 3. demo3 —— 简单的 flex 异形布局，需要图片尺寸大小不同
-
-![demo-3](./assets/img/demo3/demo-3.gif)
-
-## 4. demo4 —— contenteditable(可编辑元素) + Clipboard API - 实现自定义复制粘贴文本/图片
-
-![demo-4](./assets/img/demo4/demo-4.gif)
-
-## 5. demo5 —— 等比缩放的盒子
-
-![demo-5](./assets/img/demo5/demo-5.gif)
-
-## 6. demo6 —— pdf 在线预览
-
-![demo-6](./assets/img/demo6/demo-6.gif)
-
-## 7. demo7 —— docx 在线预览
-
-![demo-7](./assets/img/demo7/demo-7.gif)
-
-## 8. demo8 —— 浏览器小窗口新开 tab 功能
-
-![demo-8](./assets/img/demo8/demo-8.gif)
-
-## 9. demo9 —— 数字滚动动效
-
-![demo-9](./assets/img/demo9/demo-9.gif)
-
-## 10. demo10 —— 抛物线飞跃动画特效（TODO...）
-
-## 11. demo11 —— 解决 transform: translate 的 hover 抖动问题
-
-![demo-11](./assets/img/demo11/demo-11.gif)
+22. 解决 元素的 hover 抖动问题 - 2024.11.25
+23. 添加 富文本编辑器 (一同维护 @ckeditor/ckeditor5-vue, ckeditor5 的版本) - 2025.02.18
+24. 添加 邮件发送功能 (一同维护 nodemailer, @types/nodemailer 的版本) - 2025.02.18
+25. 解决 iconfont 图标在刷新页面后的闪烁问题, (一同维护 @nuxt/icon 的版本) - 2025.02.18
+26. 实现 歌词滚动功能 - 2025.04.18
+27. 实现 视频关键帧提取功能 - 2025.04.21
+28. 实现 抛物线飞跃动画特效 - 2025.05.05

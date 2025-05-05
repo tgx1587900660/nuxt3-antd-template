@@ -23,18 +23,18 @@ const items = [
   { key: '/colorthief', label: '提取图片主色调', to: '/colorthief' },
   { key: '/radio-style', label: '自定义单选框样式', to: '/radio-style' },
   { key: '/alien-layout', label: '图片异形布局', to: '/alien-layout' },
-  { key: '/copy', label: '复制粘贴', to: '/copy' },
+  { key: '/copy', label: '复制粘贴 API', to: '/copy' },
   { key: '/ratio-box-test', label: '等比缩放的盒子', to: '/ratio-box-test' },
   { key: '/pdf-view', label: '在线预览 pdf', to: '/pdf-view' },
   { key: '/docx-view', label: '在线预览 docx', to: '/docx-view' },
   { key: '/new-windows', label: '浏览器小窗口新开 tab', to: '/new-windows' },
   { key: '/number-scroll', label: '数字滚动效果', to: '/number-scroll' },
-  { key: '/parabola-fly', label: '抛物线飞跃效果（TODO...）', to: '/parabola-fly' },
-  { key: '/hover-shake', label: 'hover 抖动问题', to: '/hover-shake' },
-  { key: '/video-keyframes', label: '获取视频关键帧', to: '/video-keyframes' },
+  { key: '/hover-shake', label: '元素 hover 抖动问题', to: '/hover-shake' },
   { key: '/rich-text-editor', label: '富文本编辑器', to: '/rich-text-editor' },
   { key: '/email-send', label: '邮件发送功能', to: '/email-send' },
+  { key: '/video-keyframes', label: '获取视频关键帧', to: '/video-keyframes' },
   { key: '/lrc-scroll', label: '歌词滚动效果', to: '/lrc-scroll' },
+  { key: '/parabola-fly', label: '抛物线飞跃效果', to: '/parabola-fly' },
 ];
 
 // 设置SEO

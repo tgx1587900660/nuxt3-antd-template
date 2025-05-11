@@ -7,6 +7,15 @@ export default defineNuxtConfig({
 
   modules: ['@pinia/nuxt', '@ant-design-vue/nuxt', '@nuxt/icon'],
 
+  components: {
+    dirs: [
+      {
+        path: '~/components',
+        extensions: ['.vue'],
+      },
+    ],
+  },
+
   icon: {
     customCollections: [
       {

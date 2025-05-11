@@ -35,6 +35,7 @@ const items = [
   { key: '/video-keyframes', label: '获取视频关键帧', to: '/video-keyframes' },
   { key: '/lrc-scroll', label: '歌词滚动效果', to: '/lrc-scroll' },
   { key: '/parabola-fly', label: '抛物线飞跃效果', to: '/parabola-fly' },
+  { key: '/check-network', label: '检查网络状态', to: '/check-network' },
 ];
 
 // 设置SEO

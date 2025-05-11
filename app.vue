@@ -37,6 +37,7 @@ const items = [
   { key: '/parabola-fly', label: '抛物线飞跃效果', to: '/parabola-fly' },
   { key: '/check-network', label: '检查网络状态', to: '/check-network' },
   { key: '/local-file-read', label: '本地文件读取', to: '/local-file-read' },
+  { key: '/gaode-map-card', label: '高德地图名片', to: '/gaode-map-card' },
 ];
 
 // 设置SEO

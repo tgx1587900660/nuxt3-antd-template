@@ -164,6 +164,11 @@ function setOffset() {
   // }
 }
 
+useHead({
+  title: '歌词滚动效果',
+  meta: [{ name: 'description', content: '歌词滚动效果' }],
+});
+
 onMounted(() => {
   // createLrcElements();
   if (!container.value || !ul.value) {

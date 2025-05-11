@@ -8,6 +8,11 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: 'ckeditor5 富文本编辑器测试',
+  meta: [{ name: 'description', content: 'ckeditor5 富文本编辑器测试' }],
+});
+</script>
 
 <style lang="less" scoped></style>

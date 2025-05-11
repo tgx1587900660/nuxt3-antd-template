@@ -76,6 +76,11 @@ function captureFrame(file: File, time: number) {
     });
   });
 }
+
+useHead({
+  title: '获取视频的关键帧',
+  meta: [{ name: 'description', content: '获取视频的关键帧, 选取封面' }],
+});
 </script>
 
 <style lang="less" scoped>

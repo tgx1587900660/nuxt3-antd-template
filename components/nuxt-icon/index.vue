@@ -50,6 +50,11 @@ import { Icon } from '#components';
 const inputIcon = ref('uil:github');
 
 const MyIcon = h(Icon, { name: 'my-icon:close' });
+
+useHead({
+  title: '@nuxt/icon 图标测试',
+  meta: [{ name: 'description', content: '测试 @nuxt/icon' }],
+});
 </script>
 
 <style lang="less" scoped></style>

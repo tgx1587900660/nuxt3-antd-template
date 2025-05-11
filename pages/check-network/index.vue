@@ -32,6 +32,11 @@ const isNavigatorOnline = ref(true);
 const checkOnline = () => {
   isNavigatorOnline.value = navigator.onLine;
 };
+
+useHead({
+  title: '检查网络状态',
+  meta: [{ name: 'description', content: '使用事件监听器检查网络状态' }],
+});
 </script>
 
 <style lang="less" scoped></style>

@@ -58,6 +58,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     githubToken: '', // 暂未用到
+    public: {
+      testPublicVar: 'testPublicVar',
+    },
   },
 
   nitro: {

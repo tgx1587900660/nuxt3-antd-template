@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHeader title="本地文件读取" desc="使用 FileReader 读取本地文件" />
+    <AppHeader title="本地文件读取" desc="使用 FileReader 读取本地文件, 只读取 图片文件 和 txt文件" />
     <div>
       <input type="file" accept=".txt,image/jpeg,image/png,image/gif,image/jpg,image/webp" @change="handleFileChange" />
 

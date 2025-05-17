@@ -39,6 +39,7 @@ const items = [
   { key: '/local-file-read', label: '本地文件读取', to: '/local-file-read' },
   { key: '/gaode-map-card', label: '高德地图名片', to: '/gaode-map-card' },
   { key: '/app-cache', label: '应用缓存', to: '/app-cache' },
+  { key: '/color-blend-tester', label: '颜色混合测试工具', to: '/color-blend-tester' },
 ];
 
 // 设置SEO

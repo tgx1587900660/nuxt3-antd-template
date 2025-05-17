@@ -6,7 +6,8 @@
 .nuxt
 .output
 node_modules
-public
+# public
+# !public/html/
 
 build
 dist

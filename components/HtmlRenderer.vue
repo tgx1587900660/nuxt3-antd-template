@@ -103,7 +103,7 @@ const props = withDefaults(defineProps<Props>(), {
   height: '100%',
   width: '100%',
   title: 'HTML内容',
-  allowScripts: false,
+  allowScripts: true,
   useWrapper: true,
   wrapperClass: '',
 });

@@ -40,6 +40,7 @@ const items = [
   { key: '/gaode-map-card', label: '高德地图名片', to: '/gaode-map-card' },
   { key: '/app-cache', label: '应用缓存', to: '/app-cache' },
   { key: '/color-blend-tester', label: '颜色混合测试工具', to: '/color-blend-tester' },
+  { key: '/2048_game_tailwind', label: '2048 游戏', to: '/2048_game_tailwind' },
 ];
 
 // 设置SEO

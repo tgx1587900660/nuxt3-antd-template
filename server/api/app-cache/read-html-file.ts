@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     // 获取项目根目录路径
     const rootDir = process.cwd();
     console.log('rootDir :>> ', rootDir);
-    const fullPath = path.join(rootDir, 'server/api/app-cache', filePath);
+    const fullPath = path.join(rootDir, '/public/html', filePath);
     console.log('filePath :>> ', filePath);
     console.log('fullPath :>> ', fullPath);
 

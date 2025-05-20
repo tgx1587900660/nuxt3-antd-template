@@ -17,7 +17,7 @@ async function init() {
     // 从服务器API获取当前文件夹中的index.html
     const { data: htmlContent } = await useFetch('/api/app-cache/read-html-file', {
       query: {
-        path: './index.html', // 相对于项目根目录的路径
+        path: '/app-cache.html', // 相对于项目根目录的路径
       },
     });
     console.log('htmlContent.value :>> ', htmlContent.value);

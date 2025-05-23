@@ -37,3 +37,9 @@ pnpm preview # 预览 build 后的文件
 - 实现 视频关键帧提取功能 - 2025.04.21
 - 实现 抛物线飞跃动画特效 - 2025.05.05
 - ck-editor5 富文本编辑器版本调整到37.1.0, (一同维护 所有@ckeditor/ckeditor5 开头系列的版本) - 2025.05.24
+  - 1.初始化一个最基本的富文本
+    - 添加 @ckeditor/ckeditor5-theme-lark 为vite插件
+    - 编写ck-editor/index.vue组件，使用的时候注意用client-only包裹
+    - @ckeditor/ckeditor5-editor-classic 用于创建editor实例
+    - @ckeditor/ckeditor5-essentials 和 @ckeditor/ckeditor5-paragraph 提供基础能力，如写入数据、回车换行、撤销等
+    - @ckeditor/ckeditor5-basic-styles 提供基本格式功能，如粗体(bold)、斜体(italic)等

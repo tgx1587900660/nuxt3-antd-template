@@ -1,4 +1,8 @@
 import { defineNuxtConfig } from 'nuxt/config';
+import ckeditor5 from '@ckeditor/vite-plugin-ckeditor5';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 export default defineNuxtConfig({
   devtools: {
@@ -63,6 +67,18 @@ export default defineNuxtConfig({
         'ant-design-vue/lib': 'ant-design-vue/es',
         'ant-design-vue': 'ant-design-vue/es',
       },
+    },
+    plugins: [ckeditor5({ theme: require.resolve('@ckeditor/ckeditor5-theme-lark') })],
+    optimizeDeps: {
+      include: [
+        'pdfjs-dist',
+        'colorthief',
+        'docx-preview',
+        '@ckeditor/ckeditor5-basic-styles',
+        '@ckeditor/ckeditor5-editor-classic',
+        '@ckeditor/ckeditor5-essentials',
+        '@ckeditor/ckeditor5-paragraph',
+      ],
     },
   },
 

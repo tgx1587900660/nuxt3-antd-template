@@ -1,4 +1,15 @@
 {
+  // 使用当前项目的prettier配置文件，如果没有则使用默认的配置
+  "prettier.requireConfig": true,
+  // 以下程序使用prettier默认进行格式化
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",  
+    "source.organizeImports": "never"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "css.customData": [
     ".vscode/tailwindcss.json"
   ],

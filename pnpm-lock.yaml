@@ -14,13 +14,37 @@ importers:
       '@ant-design/icons-vue':
         specifier: ^7.0.1
         version: 7.0.1(vue@3.5.13(typescript@5.8.3))
+      '@ckeditor/ckeditor5-alignment':
+        specifier: 37.1.0
+        version: 37.1.0
+      '@ckeditor/ckeditor5-autoformat':
+        specifier: 37.1.0
+        version: 37.1.0
       '@ckeditor/ckeditor5-basic-styles':
+        specifier: 37.1.0
+        version: 37.1.0
+      '@ckeditor/ckeditor5-block-quote':
+        specifier: 37.1.0
+        version: 37.1.0
+      '@ckeditor/ckeditor5-document-outline':
         specifier: 37.1.0
         version: 37.1.0
       '@ckeditor/ckeditor5-editor-classic':
         specifier: 37.1.0
         version: 37.1.0
       '@ckeditor/ckeditor5-essentials':
+        specifier: 37.1.0
+        version: 37.1.0
+      '@ckeditor/ckeditor5-font':
+        specifier: 37.1.0
+        version: 37.1.0
+      '@ckeditor/ckeditor5-heading':
+        specifier: 37.1.0
+        version: 37.1.0
+      '@ckeditor/ckeditor5-link':
+        specifier: 37.1.0
+        version: 37.1.0
+      '@ckeditor/ckeditor5-list':
         specifier: 37.1.0
         version: 37.1.0
       '@ckeditor/ckeditor5-paragraph':
@@ -280,8 +304,20 @@ packages:
     resolution: {integrity: sha512-H45s8fVLYjbhFH62dIJ3WtmJ6RSPt/3DRO0ZcT2SUiYiQyz3BLVb9ADEnLl91m74aQPS3AzzeajZHYOalWe3bg==}
     engines: {node: '>=6.9.0'}
 
+  '@ckeditor/ckeditor5-alignment@37.1.0':
+    resolution: {integrity: sha512-VIlkssFj5Ajo6nClDnx7eWDgIkhFUMsNeR7o0xB7gfgqeLmBNKQvNr0oIRI8RQxG0/VWogWKJ68PBZ4Y22uIag==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-autoformat@37.1.0':
+    resolution: {integrity: sha512-wZSuqsD6oz06fbE2zCn8PUDyax5YUDWFnB/26piLBu0HteRYFXJtIq6s2vA+zBbFfR3FL7362t+DP9VEHGigtw==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
   '@ckeditor/ckeditor5-basic-styles@37.1.0':
     resolution: {integrity: sha512-AwCiVsq5Wh0tBOPLOV0NADnZRNw210h1/xTzsO2U8TGBcbVJ4ukU07OMSvkOhi7jrA4wLZI7R+XmhZR0vsUGkA==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-block-quote@37.1.0':
+    resolution: {integrity: sha512-975XXg4YzJ857UF7dPujGxIkyvVfU6m4/QTCKU5j2SbrTqPKCQ59PLOOgyy1qC76D/uyqV1+V+beGairUrmA1A==}
     engines: {node: '>=16.0.0', npm: '>=5.7.1'}
 
   '@ckeditor/ckeditor5-clipboard@37.1.0':
@@ -291,6 +327,9 @@ packages:
   '@ckeditor/ckeditor5-core@37.1.0':
     resolution: {integrity: sha512-edewiWlMCK5BPN9Can0A9skob9dNDMrv09khiKaUYK5PEobZZQSyUBck52vXpt255u2rnlmhF5phTqsQo5EiOw==}
     engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-document-outline@37.1.0':
+    resolution: {integrity: sha512-bDvUlMo4b43xwuCO+oEf+g/Z+DPkkyoLgKjlNC+BNIT8jDKD+vVAj5jMWSGvs+EczWkmIWi6zsdZQxaQcWQKrA==}
 
   '@ckeditor/ckeditor5-editor-classic@37.1.0':
     resolution: {integrity: sha512-3XipfINHckd8NITQT9ePdk0+3vytZ567x5qDGCeTgVAKqiFYNaEmuQKir1+D8uQddbrDNolv91XcILN8XHzDWQ==}
@@ -306,6 +345,22 @@ packages:
 
   '@ckeditor/ckeditor5-essentials@37.1.0':
     resolution: {integrity: sha512-LJl/3XHQpVvoFq22Z2JtNCog+0Z646MwEIZ70YyGyltA1fxXRpC0PrUg6NYND4AbDTHvWLUVTbQhhXzfSHw2KQ==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-font@37.1.0':
+    resolution: {integrity: sha512-mkMEtYiPRkI6lDYG1/KK7/JaVrfU5THk4ZK9GS2H+EiUqO4sujjrwzVikPA001WbLNt3C1e+qwCo9PugW4KFlQ==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-heading@37.1.0':
+    resolution: {integrity: sha512-fr2gOkiitJJKtJvunbitKEVwQoh26oBO7mbp/1BNSydtsOoP+B9Tl5S15WiPRAnc5pjIAT8MOJO5PQY/GDXs5Q==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-link@37.1.0':
+    resolution: {integrity: sha512-ImVcYYfz5oR/zqHGYdvgSvfHU/7ia/psAqjL+T/5OaqMRunALdUzdtuAsMkWGEH/oF8vKRsdGeWwsyrEvTF4XA==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-list@37.1.0':
+    resolution: {integrity: sha512-hV1fNhpMkivlVuwRx0TVSEzPgciQa14uV/lbnhCmjT33WDrh8hAcYFK+kJx+9dB1OzNtyTlsMA/DxUJPdNr9TA==}
     engines: {node: '>=16.0.0', npm: '>=5.7.1'}
 
   '@ckeditor/ckeditor5-paragraph@37.1.0':
@@ -5212,7 +5267,19 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
+  '@ckeditor/ckeditor5-alignment@37.1.0':
+    dependencies:
+      ckeditor5: 37.1.0
+
+  '@ckeditor/ckeditor5-autoformat@37.1.0':
+    dependencies:
+      ckeditor5: 37.1.0
+
   '@ckeditor/ckeditor5-basic-styles@37.1.0':
+    dependencies:
+      ckeditor5: 37.1.0
+
+  '@ckeditor/ckeditor5-block-quote@37.1.0':
     dependencies:
       ckeditor5: 37.1.0
 
@@ -5228,6 +5295,12 @@ snapshots:
     dependencies:
       '@ckeditor/ckeditor5-engine': 37.1.0
       '@ckeditor/ckeditor5-utils': 37.1.0
+      lodash-es: 4.17.21
+
+  '@ckeditor/ckeditor5-document-outline@37.1.0':
+    dependencies:
+      '@ckeditor/ckeditor5-ui': 37.1.0
+      ckeditor5: 37.1.0
       lodash-es: 4.17.21
 
   '@ckeditor/ckeditor5-editor-classic@37.1.0':
@@ -5248,6 +5321,25 @@ snapshots:
 
   '@ckeditor/ckeditor5-essentials@37.1.0':
     dependencies:
+      ckeditor5: 37.1.0
+
+  '@ckeditor/ckeditor5-font@37.1.0':
+    dependencies:
+      ckeditor5: 37.1.0
+
+  '@ckeditor/ckeditor5-heading@37.1.0':
+    dependencies:
+      ckeditor5: 37.1.0
+
+  '@ckeditor/ckeditor5-link@37.1.0':
+    dependencies:
+      '@ckeditor/ckeditor5-ui': 37.1.0
+      ckeditor5: 37.1.0
+      lodash-es: 4.17.21
+
+  '@ckeditor/ckeditor5-list@37.1.0':
+    dependencies:
+      '@ckeditor/ckeditor5-ui': 37.1.0
       ckeditor5: 37.1.0
 
   '@ckeditor/ckeditor5-paragraph@37.1.0':

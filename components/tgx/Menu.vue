@@ -54,7 +54,7 @@ const onClick = (item: Record<string, string>) => {
 .tgx-menu {
   display: flex;
   align-items: center;
-  padding: 8px 10px;
+  padding: 0 10px;
   height: 40px;
   line-height: 40px;
   border-radius: 4px;

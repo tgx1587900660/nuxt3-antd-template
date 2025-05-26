@@ -61,6 +61,7 @@ export default {
     },
   },
   corePlugins: {
-    preflight: true, // 禁用预设样式 (如果要把 TailwindCSS 添加到现有项目中，可以禁用预设样式)
+    // 预设样式,比如 h1, h2 等等
+    preflight: false, // 关闭。防止覆盖到 ck-editor 里面的样式
   },
 };

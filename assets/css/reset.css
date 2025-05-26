@@ -10,7 +10,8 @@ ol,
 ul,
 p,
 fieldset,
-legend {
+legend,
+a {
   margin: 0;
   padding: 0;
 }

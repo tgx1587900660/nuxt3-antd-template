@@ -1,43 +1,7 @@
 html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-ul,
-p,
-fieldset,
-legend,
-a {
+body {
   margin: 0;
   padding: 0;
-}
-
-html,
-body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-}
-
-a {
-  color: #2d374b;
-  text-decoration: none;
-}
-
-a:hover {
-  color: theme('colors.pink.default');
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  border: 0;
-  vertical-align: middle;
-  user-select: none;
 }

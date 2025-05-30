@@ -3,19 +3,26 @@
     <AppHeader :title="'富文本编辑器'" :desc="'富文本编辑器，使用ckeditor5'"></AppHeader>
 
     <div class="p-4">
-      <tgx-button @click="insertText">插入文本</tgx-button>
-      <ClientOnly>
-        <ck-editor ref="ckEditorRef" />
-      </ClientOnly>
+      <tgx-tab-list class="px-3 py-2" :list="list" @change="onChange"></tgx-tab-list>
+      <hr />
+
+      <Demo1 v-if="activeTabKey === 'demo1'" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-const ckEditorRef = useTemplateRef('ckEditorRef');
+import Demo1 from './demo-1/index.vue';
 
-const insertText = () => {
-  ckEditorRef.value?.insertText();
+const list = [
+  { key: 'demo1', label: 'demo1' },
+  { key: 'demo2', label: 'demo2' },
+];
+
+const activeTabKey = ref(list[0].key);
+const onChange = (key: string) => {
+  console.log('key :>> ', key);
+  activeTabKey.value = key;
 };
 
 useHead({

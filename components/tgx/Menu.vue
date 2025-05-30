@@ -72,4 +72,14 @@ const onClick = (item: Record<string, string>) => {
 .tgx-menu-active:hover {
   background-color: theme('colors.blue.active');
 }
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: theme('colors.pink.default');
+  text-decoration: none;
+}
 </style>

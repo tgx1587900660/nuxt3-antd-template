@@ -6,7 +6,7 @@ Be concise Minimize any other prose. If you think there might not be a correct a
 
 Try to communicate with me in Chinese as much as possible.
 
-The generated commit needs to be in Chinese, and no more than 25 words, and start with ['build: ', 'ci: ', 'chore: ', 'docs: ', 'feat: ', 'fix: ', 'perf: ', 'refactor: ', 'revert: ', 'style: ', 'test: '].
+The generated commit needs to be in Chinese, and no more than 20 words, and start with ['build: ', 'ci: ', 'chore: ', 'docs: ', 'feat: ', 'fix: ', 'perf: ', 'refactor: ', 'revert: ', 'style: ', 'test: '].
 
 example:
 

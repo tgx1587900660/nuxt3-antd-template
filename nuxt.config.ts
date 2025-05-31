@@ -8,57 +8,46 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
-
   modules: ['@pinia/nuxt', '@ant-design-vue/nuxt', '@nuxt/icon'],
-
   components: {
-    dirs: [
-      {
-        path: '~/components',
-        extensions: ['.vue'],
-      },
-    ],
+    dirs: [{ path: '~/components', extensions: ['.vue'] }],
   },
-
   app: {
     head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
+      htmlAttrs: { lang: 'en' },
       meta: [
         // <meta name="viewport" content="width=device-width, initial-scale=1">
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
     },
   },
-
   icon: {
     customCollections: [
-      {
-        prefix: 'my-icon',
-        dir: './assets/icons',
-        normalizeIconName: false,
-      },
+      { prefix: 'my-icon', dir: './assets/icons', normalizeIconName: false },
+      // ...
     ],
   },
-
   antd: {
     extractStyle: true,
   },
-
   css: [
     '~/assets/css/index.css',
     // 'ant-design-vue/dist/reset.css',
     // ...
   ],
-
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-
+  compatibilityDate: '2024-12-16',
+  runtimeConfig: {
+    githubToken: 'test-token: xxxxxxxxxxxxxxxxxxxxx', // 暂未用到
+    public: {
+      testPublicVar: 'testPublicVar',
+    },
+  },
   vite: {
     resolve: {
       alias: {
@@ -89,16 +78,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-
-  compatibilityDate: '2024-12-16',
-
-  runtimeConfig: {
-    githubToken: '', // 暂未用到
-    public: {
-      testPublicVar: 'testPublicVar',
-    },
-  },
-
   nitro: {
     compressPublicAssets: { gzip: true },
   },

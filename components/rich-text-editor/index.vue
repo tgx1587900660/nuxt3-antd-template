@@ -3,7 +3,7 @@
     <AppHeader :title="'富文本编辑器'" :desc="'富文本编辑器，使用ckeditor5'"></AppHeader>
 
     <div class="p-4">
-      <tgx-tab-list class="px-3 py-2" :list="list" @change="onChange"></tgx-tab-list>
+      <tgx-tab-list :list="list" @change="onChange"></tgx-tab-list>
       <hr />
 
       <Demo1 v-if="activeTabKey === 'demo1'" />

@@ -5,7 +5,7 @@
       :desc="'原理是使用2个元素,父元素控制水平运动,子元素控制垂直运动,从而实现抛物线运动'">
     </AppHeader>
 
-    <tgx-tab-list class="px-3 py-2" :list="list" @change="onChange"></tgx-tab-list>
+    <tgx-tab-list :list="list" @change="onChange"></tgx-tab-list>
 
     <hr />
 

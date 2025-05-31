@@ -8,6 +8,7 @@
 
       <Demo1 v-if="activeTabKey === 'demo1'" />
       <Demo2 v-if="activeTabKey === 'demo2'" />
+      <Demo3 v-if="activeTabKey === 'demo3'" />
     </div>
   </div>
 </template>
@@ -15,15 +16,17 @@
 <script lang="ts" setup>
 import Demo1 from './demo1/index.vue';
 import Demo2 from './demo2/index.vue';
+import Demo3 from './demo3/index.vue';
 
 const list = [
+  { key: 'demo3', label: 'demo3' },
   { key: 'demo2', label: 'demo2' },
   { key: 'demo1', label: 'demo1' },
 ];
 
 const activeTabKey = ref(list[0].key);
 const onChange = (key: string) => {
-  console.log('key :>> ', key);
+  // console.log('key :>> ', key);
   activeTabKey.value = key;
 };
 

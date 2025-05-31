@@ -1,9 +1,13 @@
 <template>
-  <div id="editor" ref="editorRef"></div>
+  <div id="editor1" ref="editorRef"></div>
 </template>
 
 <script setup lang="ts">
 import MyClassicEditor from './ckeditor1';
+
+defineOptions({
+  name: 'CkEditor1',
+});
 
 const editorRef = useTemplateRef('editorRef');
 

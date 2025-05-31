@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>demo1: 使用ckeditor5</h1>
+    <h1 class="text-xl font-bold">demo1: 使用ckeditor5</h1>
     <ClientOnly>
       <ck-editor1 />
     </ClientOnly>

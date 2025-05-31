@@ -43,3 +43,6 @@ pnpm preview # 预览 build 后的文件
     - @ckeditor/ckeditor5-editor-classic 用于创建editor实例
     - @ckeditor/ckeditor5-essentials 和 @ckeditor/ckeditor5-paragraph 提供基础能力，如写入数据、回车换行、撤销等
     - @ckeditor/ckeditor5-basic-styles 提供基本格式功能，如粗体(bold)、斜体(italic)等
+    - @ckeditor/ckeditor5-core 提供ts类型, 核心功能，如数据模型、事件系统等
+    - @ckeditor/ckeditor5-utils 提供ts类型和工具函数
+- 新增 lodash-es 依赖, (一同维护 lodash-es, @types/lodash-es 的版本) - 2025.05.31

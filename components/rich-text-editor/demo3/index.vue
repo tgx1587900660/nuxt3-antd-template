@@ -33,7 +33,7 @@ let editorInstance: MyClassicEditor | null = null;
 const onEditorReady = (editor: MyClassicEditor) => {
   editorInstance = editor;
   console.log('editorInstance :>> ', editorInstance);
-  // initContentChangeEvent();
+  initContentChangeEvent();
 };
 
 /**
@@ -50,7 +50,7 @@ function insertTextToEnd() {
      * 找到根节点<root> (可以理解为dom树的根节点 document.documentElement 也就是 <html> 标签),
      * ckeditor5也有自己的一棵dom树，但与网页文档对象dom树不一样，而是一一对应的
      */
-    const root = editorInstance?.model.document.getRoot();
+    const root = writer.model.document.getRoot();
     if (!root) {
       return;
     }
@@ -63,11 +63,9 @@ function insertTextToEnd() {
     editorInstance?.execute('enter');
 
     // 插入文本
-    editorInstance?.model.change((writer) => {
-      const content = writer.createText('The End!');
-      // console.log('content :>> ', content);
-      editorInstance?.model.insertContent(content);
-    });
+    const content = writer.createText('writer 创建的文本 to The End!');
+    // console.log('content :>> ', content);
+    writer.model.insertContent(content);
   });
 }
 

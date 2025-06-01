@@ -47,7 +47,7 @@ const onClick = (item: Record<string, string>) => {
 
 <style lang="less" scoped>
 .menu-wrapper {
-  padding: 2px 6px;
+  padding: 0 8px;
   height: 100%;
   overflow: auto;
 }

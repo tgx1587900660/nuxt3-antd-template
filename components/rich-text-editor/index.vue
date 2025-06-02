@@ -10,6 +10,7 @@
       <Demo2 v-if="activeTabKey === 'demo2'" />
       <Demo3 v-if="activeTabKey === 'demo3'" />
       <Demo4 v-if="activeTabKey === 'demo4'" />
+      <Demo5 v-if="activeTabKey === 'demo5'" />
     </div>
   </div>
 </template>
@@ -19,8 +20,10 @@ import Demo1 from './demo1/index.vue';
 import Demo2 from './demo2/index.vue';
 import Demo3 from './demo3/index.vue';
 import Demo4 from './demo4/index.vue';
+import Demo5 from './demo5/index.vue';
 
 const list = [
+  { key: 'demo5', label: 'demo5' },
   { key: 'demo4', label: 'demo4' },
   { key: 'demo3', label: 'demo3' },
   { key: 'demo2', label: 'demo2' },

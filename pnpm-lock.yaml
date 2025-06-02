@@ -29,9 +29,6 @@ importers:
       '@ckeditor/ckeditor5-core':
         specifier: 37.1.0
         version: 37.1.0
-      '@ckeditor/ckeditor5-document-outline':
-        specifier: 37.1.0
-        version: 37.1.0
       '@ckeditor/ckeditor5-editor-classic':
         specifier: 37.1.0
         version: 37.1.0
@@ -339,9 +336,6 @@ packages:
   '@ckeditor/ckeditor5-core@37.1.0':
     resolution: {integrity: sha512-edewiWlMCK5BPN9Can0A9skob9dNDMrv09khiKaUYK5PEobZZQSyUBck52vXpt255u2rnlmhF5phTqsQo5EiOw==}
     engines: {node: '>=16.0.0', npm: '>=5.7.1'}
-
-  '@ckeditor/ckeditor5-document-outline@37.1.0':
-    resolution: {integrity: sha512-bDvUlMo4b43xwuCO+oEf+g/Z+DPkkyoLgKjlNC+BNIT8jDKD+vVAj5jMWSGvs+EczWkmIWi6zsdZQxaQcWQKrA==}
 
   '@ckeditor/ckeditor5-editor-classic@37.1.0':
     resolution: {integrity: sha512-3XipfINHckd8NITQT9ePdk0+3vytZ567x5qDGCeTgVAKqiFYNaEmuQKir1+D8uQddbrDNolv91XcILN8XHzDWQ==}
@@ -5313,12 +5307,6 @@ snapshots:
     dependencies:
       '@ckeditor/ckeditor5-engine': 37.1.0
       '@ckeditor/ckeditor5-utils': 37.1.0
-      lodash-es: 4.17.21
-
-  '@ckeditor/ckeditor5-document-outline@37.1.0':
-    dependencies:
-      '@ckeditor/ckeditor5-ui': 37.1.0
-      ckeditor5: 37.1.0
       lodash-es: 4.17.21
 
   '@ckeditor/ckeditor5-editor-classic@37.1.0':

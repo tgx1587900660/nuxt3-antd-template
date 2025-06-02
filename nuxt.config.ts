@@ -73,7 +73,6 @@ export default defineNuxtConfig({
         '@ckeditor/ckeditor5-paragraph',
         '@ckeditor/ckeditor5-block-quote',
         '@ckeditor/ckeditor5-alignment',
-        '@ckeditor/ckeditor5-document-outline',
         '@ckeditor/ckeditor5-font',
       ],
     },

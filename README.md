@@ -36,13 +36,19 @@ pnpm preview # 预览 build 后的文件
 - 实现 歌词滚动功能 - 2025.04.18
 - 实现 视频关键帧提取功能 - 2025.04.21
 - 实现 抛物线飞跃动画特效 - 2025.05.05
-- ck-editor5 富文本编辑器版本调整到37.1.0, (一同维护 所有@ckeditor/ckeditor5 开头系列的版本) - 2025.05.24
-  - 1.初始化一个最基本的富文本
-    - 添加 @ckeditor/ckeditor5-theme-lark 为vite插件
-    - 编写ck-editor/index.vue组件，使用的时候注意用client-only包裹
-    - @ckeditor/ckeditor5-editor-classic 用于创建editor实例
-    - @ckeditor/ckeditor5-essentials 和 @ckeditor/ckeditor5-paragraph 提供基础能力，如写入数据、回车换行、撤销等
-    - @ckeditor/ckeditor5-basic-styles 提供基本格式功能，如粗体(bold)、斜体(italic)等
-    - @ckeditor/ckeditor5-core 提供ts类型, 核心功能，如数据模型、事件系统等
-    - @ckeditor/ckeditor5-utils 提供ts类型和工具函数
+- ck-editor5 富文本编辑器版本固定到 37.1.0, (一同维护 所有@ckeditor/ckeditor5 开头系列的版本) - 2025.05.24
+  - @ckeditor/ckeditor5-theme-lark (必须) 作为 vite 插件, 用于集成 ckeditor5
+  - @ckeditor/ckeditor5-editor-classic (必须) 用于创建editor实例
+  - @ckeditor/ckeditor5-essentials (必须) 提供基础能力
+  - @ckeditor/ckeditor5-paragraph (必须) 提供段落能力，如段落()、写入数据、回车换行等
+  - @ckeditor/ckeditor5-core (用ts则必须) 提供ts类型, 核心功能，如数据模型、事件系统等
+  - @ckeditor/ckeditor5-utils (用ts则必须) 提供ts类型和工具函数
+  - @ckeditor/ckeditor5-basic-styles 提供基本格式功能，如粗体(bold)、斜体(italic)等
+  - @ckeditor/ckeditor5-alignment
+  - @ckeditor/ckeditor5-autoformat
+  - @ckeditor/ckeditor5-block-quote 提供引用功能
+  - @ckeditor/ckeditor5-font
+  - @ckeditor/ckeditor5-heading 提供标题能力
+  - @ckeditor/ckeditor5-link 提供链接能力
+  - @ckeditor/ckeditor5-list 提供列表能力，比如有序列表、无需列表
 - 新增 lodash-es 依赖, (一同维护 lodash-es, @types/lodash-es 的版本) - 2025.05.31

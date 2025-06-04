@@ -41,6 +41,9 @@ importers:
       '@ckeditor/ckeditor5-heading':
         specifier: 37.1.0
         version: 37.1.0
+      '@ckeditor/ckeditor5-image':
+        specifier: 37.1.0
+        version: 37.1.0
       '@ckeditor/ckeditor5-link':
         specifier: 37.1.0
         version: 37.1.0
@@ -359,6 +362,10 @@ packages:
 
   '@ckeditor/ckeditor5-heading@37.1.0':
     resolution: {integrity: sha512-fr2gOkiitJJKtJvunbitKEVwQoh26oBO7mbp/1BNSydtsOoP+B9Tl5S15WiPRAnc5pjIAT8MOJO5PQY/GDXs5Q==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-image@37.1.0':
+    resolution: {integrity: sha512-wIKGfasamPE7MWnIoNIpmWgxlZOz8bxw8ZaLucRdJGaU1+orzQabYcqZM+y+3puAowXs2MIGcA7kSmyJPvL0Jw==}
     engines: {node: '>=16.0.0', npm: '>=5.7.1'}
 
   '@ckeditor/ckeditor5-link@37.1.0':
@@ -5336,6 +5343,12 @@ snapshots:
   '@ckeditor/ckeditor5-heading@37.1.0':
     dependencies:
       ckeditor5: 37.1.0
+
+  '@ckeditor/ckeditor5-image@37.1.0':
+    dependencies:
+      '@ckeditor/ckeditor5-ui': 37.1.0
+      ckeditor5: 37.1.0
+      lodash-es: 4.17.21
 
   '@ckeditor/ckeditor5-link@37.1.0':
     dependencies:

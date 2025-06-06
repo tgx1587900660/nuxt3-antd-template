@@ -44,6 +44,9 @@ importers:
       '@ckeditor/ckeditor5-image':
         specifier: 37.1.0
         version: 37.1.0
+      '@ckeditor/ckeditor5-indent':
+        specifier: 37.1.0
+        version: 37.1.0
       '@ckeditor/ckeditor5-link':
         specifier: 37.1.0
         version: 37.1.0
@@ -366,6 +369,10 @@ packages:
 
   '@ckeditor/ckeditor5-image@37.1.0':
     resolution: {integrity: sha512-wIKGfasamPE7MWnIoNIpmWgxlZOz8bxw8ZaLucRdJGaU1+orzQabYcqZM+y+3puAowXs2MIGcA7kSmyJPvL0Jw==}
+    engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-indent@37.1.0':
+    resolution: {integrity: sha512-RBuyGV0um9l8dKwnugF0mfiL9H+AsaErhudcgfBhPFCoRQ3+vyQF3Mg14+iKdP2hybJQ6OaT+6a1P8OPzrq85Q==}
     engines: {node: '>=16.0.0', npm: '>=5.7.1'}
 
   '@ckeditor/ckeditor5-link@37.1.0':
@@ -5349,6 +5356,10 @@ snapshots:
       '@ckeditor/ckeditor5-ui': 37.1.0
       ckeditor5: 37.1.0
       lodash-es: 4.17.21
+
+  '@ckeditor/ckeditor5-indent@37.1.0':
+    dependencies:
+      ckeditor5: 37.1.0
 
   '@ckeditor/ckeditor5-link@37.1.0':
     dependencies:

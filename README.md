@@ -51,4 +51,5 @@ pnpm preview # 预览 build 后的文件
   - @ckeditor/ckeditor5-heading 提供标题能力
   - @ckeditor/ckeditor5-link 提供链接能力
   - @ckeditor/ckeditor5-list 提供列表能力，比如有序列表、无需列表
+  - @ckeditor/ckeditor5-indent 提供缩进能力，比如段落缩进、列表缩进等
 - 新增 lodash-es 依赖, (一同维护 lodash-es, @types/lodash-es 的版本) - 2025.05.31

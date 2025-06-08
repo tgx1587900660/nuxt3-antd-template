@@ -3,9 +3,9 @@
 </template>
 
 <script setup lang="ts">
-import MyClassicEditor from './ckeditor7';
+import MyClassicEditor from './ckeditor8';
 
-defineOptions({ name: 'CkEditor7' });
+defineOptions({ name: 'CkEditor8' });
 
 type EmitsType = {
   ready: [editor: MyClassicEditor];
@@ -21,9 +21,7 @@ async function initEditor() {
     if (!editorRef.value) {
       return;
     }
-    instance = await MyClassicEditor.create(editorRef.value, {
-      // removePlugins: ['List', 'BlockQuote', 'Link'],
-    });
+    instance = await MyClassicEditor.create(editorRef.value);
     // console.log('instance :>> ', instance);
     emit('ready', instance); // 暴露编辑器实例，给父组件使用
   } catch (error: any) {

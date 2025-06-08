@@ -59,6 +59,9 @@ importers:
       '@ckeditor/ckeditor5-theme-lark':
         specifier: 37.1.0
         version: 37.1.0
+      '@ckeditor/ckeditor5-ui':
+        specifier: 37.1.0
+        version: 37.1.0
       '@ckeditor/ckeditor5-utils':
         specifier: 37.1.0
         version: 37.1.0

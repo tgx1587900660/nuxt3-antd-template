@@ -13,9 +13,4 @@ withDefaults(defineProps<PropsType>(), {
 });
 </script>
 
-<style lang="less" scoped>
-.ck-editor-preview {
-  font-size: 16px;
-  // color: #2d3541;
-}
-</style>
+<style lang="less" scoped></style>

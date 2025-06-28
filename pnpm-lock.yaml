@@ -102,6 +102,9 @@ importers:
         specifier: ^4.5.0
         version: 4.5.0(vue@3.5.13(typescript@5.8.3))
     devDependencies:
+      '@ckeditor/ckeditor5-inspector':
+        specifier: ^4.1.0
+        version: 4.1.0
       '@ckeditor/vite-plugin-ckeditor5':
         specifier: ^0.1.3
         version: 0.1.3
@@ -377,6 +380,10 @@ packages:
   '@ckeditor/ckeditor5-indent@37.1.0':
     resolution: {integrity: sha512-RBuyGV0um9l8dKwnugF0mfiL9H+AsaErhudcgfBhPFCoRQ3+vyQF3Mg14+iKdP2hybJQ6OaT+6a1P8OPzrq85Q==}
     engines: {node: '>=16.0.0', npm: '>=5.7.1'}
+
+  '@ckeditor/ckeditor5-inspector@4.1.0':
+    resolution: {integrity: sha512-yKoIFpaSVQQIhgFEyoltwG40OSsWX5psYdYvNxW84nfxgrs90DJrbMQDtdchVZNMXBu6CkJfPiPG0WBLU9su3g==}
+    engines: {node: '>=14.0.0', npm: '>=5.7.1'}
 
   '@ckeditor/ckeditor5-link@37.1.0':
     resolution: {integrity: sha512-ImVcYYfz5oR/zqHGYdvgSvfHU/7ia/psAqjL+T/5OaqMRunALdUzdtuAsMkWGEH/oF8vKRsdGeWwsyrEvTF4XA==}
@@ -5363,6 +5370,8 @@ snapshots:
   '@ckeditor/ckeditor5-indent@37.1.0':
     dependencies:
       ckeditor5: 37.1.0
+
+  '@ckeditor/ckeditor5-inspector@4.1.0': {}
 
   '@ckeditor/ckeditor5-link@37.1.0':
     dependencies:

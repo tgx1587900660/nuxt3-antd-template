@@ -41,6 +41,8 @@ const items = [
   { key: '/app-cache', label: '应用缓存', to: '/app-cache' },
   { key: '/color-blend-tester', label: '颜色混合测试工具', to: '/color-blend-tester' },
   { key: '/2048_game_tailwind', label: '2048 游戏', to: '/2048_game_tailwind' },
+  // { key: '/image_recognition', label: '图片识别', to: '/image_recognition' },
+  { key: '/image-recognition', label: '图片识别成文字', to: '/image-recognition' },
 ];
 
 // 设置SEO

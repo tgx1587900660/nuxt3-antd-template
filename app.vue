@@ -43,6 +43,7 @@ const items = [
   { key: '/2048_game_tailwind', label: '2048 游戏', to: '/2048_game_tailwind' },
   // { key: '/image_recognition', label: '图片识别', to: '/image_recognition' },
   { key: '/image-recognition', label: '图片识别成文字', to: '/image-recognition' },
+  { key: '/gsap1', label: 'gsap1', to: '/gsap1' },
 ];
 
 // 设置SEO

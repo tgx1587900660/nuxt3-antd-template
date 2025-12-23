@@ -18,7 +18,6 @@
             :src="videoUrl"
             class="block h-full w-full object-contain"
             muted
-            controls
             playsinline
             preload="auto"
             @loadedmetadata="onVideoLoaded" />
@@ -53,20 +52,21 @@ const videoRef = ref<HTMLVideoElement | null>(null);
 const videoContainerRef = ref<HTMLDivElement | null>(null);
 const textRef = ref<HTMLDivElement | null>(null);
 
+let isInitialized = false;
+
 const onVideoLoaded = () => {
-  if (!videoRef.value || !videoContainerRef.value || !textRef.value) return;
+  if (!videoRef.value || !videoContainerRef.value || !textRef.value || isInitialized) return;
 
   const video = videoRef.value;
   const container = videoContainerRef.value;
   const text = textRef.value;
 
-  // 确保视频已加载元数据
-  if (video.readyState < 2) {
-    video.load();
+  // 只要 metadata 加载了，duration 就可用了
+  if (!video.duration || !isFinite(video.duration)) {
     return;
   }
 
-  // 暂停视频，我们通过 GSAP 手动控制
+  isInitialized = true;
   video.pause();
 
   // 创建一个 GSAP 时间轴，绑定滚动触发器
@@ -75,7 +75,7 @@ const onVideoLoaded = () => {
       trigger: container,
       start: 'top top',
       end: 'bottom bottom',
-      scrub: true,
+      scrub: 1, // 使用数字 1 增加一点平滑感，减少卡顿
     },
   });
 

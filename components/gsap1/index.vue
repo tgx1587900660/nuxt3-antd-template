@@ -41,7 +41,7 @@
 <script setup lang="ts">
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import videoUrl from '@/assets/video/laser.mp4';
+import videoUrl from './laser.mp4';
 // import videoUrl2 from '@/assets/video/big_buck_bunny_720p_surround.mp4';
 
 // 注册 ScrollTrigger 插件

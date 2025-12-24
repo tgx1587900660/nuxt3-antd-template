@@ -40,8 +40,7 @@
 <script setup lang="ts">
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import videoUrl from './laser.mp4';
-// import videoUrl2 from '@/assets/video/big_buck_bunny_720p_surround.mp4';
+import videoUrl from './test.mp4';
 
 // 注册 ScrollTrigger 插件
 if (import.meta.client) {
@@ -79,34 +78,26 @@ const onVideoLoaded = () => {
     },
   });
 
-  // 1. 文本渐变动画：从 0 到 1
-  tl.to(
-    text,
-    {
-      opacity: 1,
-      duration: 1,
-      onStart: () => console.log('文本开始渐变'),
-      onComplete: () => console.log('文本结束渐变'),
-    },
-    0,
-  );
-
-  // 2. 视频进度控制
+  // 1. 视频进度控制 (先开始)
   const videoObj = { currentTime: 0 };
-  tl.to(
-    videoObj,
-    {
-      currentTime: video.duration,
-      duration: 1,
-      ease: 'none',
-      onStart: () => console.log('视频开始播放'),
-      onComplete: () => console.log('视频结束播放'),
-      onUpdate: () => {
-        video.currentTime = videoObj.currentTime;
-      },
+  tl.to(videoObj, {
+    currentTime: video.duration,
+    duration: 1, // 相对权重
+    ease: 'none',
+    onStart: () => console.log('视频开始播放'),
+    onComplete: () => console.log('视频结束播放'),
+    onUpdate: () => {
+      video.currentTime = videoObj.currentTime;
     },
-    0,
-  );
+  });
+
+  // 2. 文本渐变动画 (在视频播放完后开始)
+  tl.to(text, {
+    opacity: 1,
+    duration: 0.5, // 相对权重
+    onStart: () => console.log('文本开始渐变'),
+    onComplete: () => console.log('文本结束渐变'),
+  });
 };
 
 onMounted(() => {
